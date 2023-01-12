@@ -1,0 +1,18 @@
+html {
+  font-size: 10px;
+}
+
+body {
+  font-family:$font-family;
+  margin:0;
+  margin-inline:0;
+}
+
+h1, h2 , h3 , p , figure{
+    margin-block:0;
+    margin-inline:0;
+}
+img{
+    height:100%;
+    width:100%;
+}

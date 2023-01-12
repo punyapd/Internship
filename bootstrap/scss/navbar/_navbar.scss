@@ -1,0 +1,34 @@
+.navbar-lightpink{
+    background-color: $primary;
+    padding:2rem 0;
+}
+
+.navbar-brand__logo{
+    width:14rem;
+    height:3.6rem;
+    margin:0;
+}
+
+
+nav{
+
+    ul{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap:3.2rem;
+    }
+    & .nav-link{
+        
+        font-size:2rem;
+        font-weight: 500;
+        line-height:120%;
+        text-align: center;
+    
+        
+    }
+
+   
+}
+ 

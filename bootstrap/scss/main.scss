@@ -1,0 +1,22 @@
+@import '../node_modules/bootstrap/scss/bootstrap.scss';
+
+@import './global/globalvars';
+@import './navbar/navbar';
+@import './global/global';
+@import './carousel/carousel';
+@import './cards/cards';
+
+//accrodion
+@import './accordion/accrodion';
+
+// mixins
+@import './mixins/typography';
+
+//about
+@import './aboutus/aboutus';
+
+//footer
+@import './footer/footer';
+
+//fonts
+@import './global/fonts';

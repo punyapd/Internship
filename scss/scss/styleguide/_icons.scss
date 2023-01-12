@@ -1,0 +1,21 @@
+@import '../mixins/flex-column';
+@import '../mixins/typography';
+.styleguide__icons{
+    
+    @include flex-column(column  , 6rem);
+    h1{
+        @include typography(
+            $fontsize-title,
+            $font-weight-title,
+            $line-height-title,
+            $h1-color
+          );
+    }
+    &__list{
+        @include flex-column(row , 4rem);
+        &__item{
+            height: 2.4rem;
+            width:2.4rem;
+        }
+    }
+}

@@ -1,0 +1,162 @@
+:root {
+    --blue: #1e90ff;
+    --white: #ffffff;
+    --pink: rgb(246, 112, 221);
+    --red: red;
+    --yellow:yellow;
+
+  } 
+
+.icon-box {
+  display: flex;
+  flex-direction: row;
+  width: 200px;
+  justify-content: space-around;
+  border: 1px solid #ddd;
+  padding: 1em;
+  border-radius: 4px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.icon {
+  height: 24px;
+  width: 24px;
+  position: relative;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.tooltip-danger {
+  padding: 10px;
+  position: absolute;
+  width: auto;
+  white-space: nowrap;
+  word-wrap: no-wrap;
+  box-shadow: 1px 1px 10px var(--red);
+  border-radius: 5px;
+  background-color:var(--white);
+  top: 40px;
+  left: 50%;
+  transform: translate(-50%);
+  transform-style: preserve-3d;
+  z-index: 200;
+  font-size: 0.9em;
+  display: none;
+}
+.fa-circle-exclamation{
+  font-size: 24px;
+}
+.tooltip-dang {
+  padding: 10px;
+  position: absolute;
+  width: auto;
+  white-space: nowrap;
+  word-wrap: no-wrap;
+  box-shadow: 1px 1px 10px var(--blue);
+  border-radius: 5px;
+  background-color: var(--white);
+  bottom: 40px;
+  left: 50%;
+  transform: translate(-50%);
+  transform-style: preserve-3d;
+  z-index: 200;
+  font-size: 0.9em;
+  display: none;
+}
+.tooltip-cow {
+  padding: 10px;
+  position: absolute;
+  width: auto;
+  white-space: nowrap;
+  word-wrap: no-wrap;
+  box-shadow: 1px 1px 10px var(--yellow);
+  border-radius: 5px;
+  background-color: #fff;
+  top: 40px;
+  left: 50%;
+  transform: translate(-50%);
+  transform-style: preserve-3d;
+  z-index: 200;
+  font-size: 0.9em;
+  display: none;
+}
+
+.icon-cow:hover .tooltip-cow{
+  display: block;
+}
+.icon-danger:hover .tooltip-danger{
+    display: block;
+  }
+  .icon-danger:hover .fa-circle-exclamation{
+    color:var(--red);
+  }
+  .icon-dang:hover .tooltip-dang{
+    display: block;
+  }
+
+.icon:hover .tooltip-danger {
+  color: var(--red);
+}
+.icon-danger:hover svg {
+  fill: var(--red);
+}
+.icon:hover .tooltip-cow {
+  color: var(--yellow);
+}
+
+
+.icon:hover .tooltip-dang {
+  color: var(--blue);
+}
+
+.icon-dang:hover svg {
+  fill: rgb(53, 8, 158);
+}
+
+.icon-cow{
+    background-image: url( './images/cow4.svg' );
+    background-size: cover;
+ }
+
+ .icon-cow:hover{
+  background-image: url('./images/download.svg');
+ }
+
+ .tooltip-danger::before {
+    content:'';
+    display: block;
+    height:10px;
+    width:10px;
+    position:absolute;
+    top:-1px ;
+    left:50%;
+    transform: rotate(45deg) translateX(-50%);
+    background-color: var(--white);;
+ }
+
+ .tooltip-cow::before {
+    content:'';
+    display: block;
+    height:10px;
+    width:10px;
+    position:absolute;
+    top:-1px ;
+    left:50%;
+    transform: rotate(45deg) translateX(-50%);
+    background-color: var(--white);;
+ }
+
+ .tooltip-dang::after {
+    content:'';
+    display: block;
+    height:10px;
+    width:10px;
+    position:absolute;
+    bottom:-9px ;
+    left:50%;
+    transform: rotate(45deg) translateX(-50%);
+    background-color: var(--white);;
+ }

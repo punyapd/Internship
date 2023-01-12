@@ -1,0 +1,48 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;700&family=Montserrat:wght@300&display=swap");
+
+body{
+    font-family: 'Montserrat', sans-serif;
+}
+.difference{
+  width:60%;
+  margin: 40px auto;
+}
+.content{
+  height:200px;
+  width:200px;
+  background-color: aqua;
+}
+.flex{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  column-gap: 20px;
+  row-gap:20px;
+}
+.padding-inline {
+  padding-inline: 20px;
+  direction:rtl;
+}
+.padding-block{
+  padding-block: 10px;
+}
+.padding-inline-start{
+  direction: rtl;
+  padding-inline-start:20px;
+}
+.padding-inline-end{
+  padding-inline-end: 20px;
+}
+.padding-top{
+  padding-top:20px;
+}
+.padding-bottom{
+  padding-bottom: 20px;
+
+}
+.padding-right{
+  padding-right:20px;
+}
+.padding-left{
+  padding-left: 20px;
+}

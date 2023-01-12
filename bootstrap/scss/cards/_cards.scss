@@ -1,0 +1,28 @@
+@import '../mixins/typography';
+.our-values__title{
+  @include typography(
+    6.4rem , 500 , 0.95
+  ){
+    font-family: MyFirstFontItalic;
+  };
+  
+  
+}
+
+.card{
+    height: 100%;
+    & .card-title{
+        @include typography(
+            1.7em , 700 , 1.2
+        );
+
+
+    & .card-text{
+        @include typography(
+            1.3rem , 300 , 1.2
+        );
+        letter-spacing: -1%;
+    }
+
+    }
+}

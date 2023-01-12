@@ -1,0 +1,45 @@
+.about-us{
+    height:500px;
+    background:url(../../images/Image.png);
+    background-size: cover;
+    position: relative;
+    &__details{
+        position: absolute;
+        top: 50%;
+        left:50%;
+        transform: translate(-50% , -50%);
+
+        &__heading{
+            @include typography(
+                5rem , 300 , 0.95 
+            ){
+                font-family: myFirstFontNormal;
+                letter-spacing: -2%;
+            };
+            // font-family: myFirstFontNormal;
+            
+
+        }
+
+        &__description{
+            @include typography(
+                1.7rem , 300  , 1.2
+            );
+            letter-spacing: -1.5%
+        }
+
+       
+        &__button{
+            position:absolute;
+            left:45%;
+            bottom:2rem;
+            @media (max-width:600px){
+                left:30%;
+            }
+        }
+    }
+}
+
+.about_us__details__heading__span{
+    font-family: myFirstFontItalic;
+}

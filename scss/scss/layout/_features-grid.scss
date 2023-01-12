@@ -1,0 +1,29 @@
+@import "../mixins/flex-column";
+@import "../global/global-vars";
+.cards {
+  width: 90vw;
+  padding: 2rem;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto auto auto;
+  gap: 2rem;
+
+  &__item {
+    @include flex-column(column , 2rem); //using mixin for flex column
+
+    &--buttonLightgreen {
+      background-color: $button-color;
+      padding: 0.5rem 1.5rem;
+      color: $text-color;
+      border: none;
+      width: 12rem;
+      border-radius: 1.5rem;
+      font-family: inherit;
+    }
+  }
+
+  @media (min-width: 600px) {
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: auto;
+  }
+}

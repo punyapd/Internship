@@ -1,0 +1,36 @@
+@import '../mixins/flex-column';
+@import '../mixins/typography';
+.styleguide__effects{
+    @include flex-column(column , 6rem);
+    h1{
+        @include typography(
+            $fontsize-title,
+            $font-weight-title,
+            $line-height-title,
+            $h1-color
+          );
+    }
+
+    &__list{
+        @include flex-column(column , 2rem);
+        &__item{
+            width:15rem;
+            height:8rem;
+            background-color: $white;
+            border:0.1em solid rgb(218, 214, 214);
+            border-radius: 5rem;
+            box-shadow: 1px 2px 12px 1px rgba(0, 0, 0, 0.25);
+        }
+
+        &__value{
+            @include typography(
+          $fontsize-body-1-regular,
+          $font-weight-body-1-regular,
+          $line-height-body-1-regular,
+          $h1-color
+        );
+        }
+    }
+
+
+}

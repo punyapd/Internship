@@ -1,0 +1,12 @@
+$typography:
+".cards__item__title" 2rem 700 3.4rem , 
+".cards__item__description" 1.6rem 400 2.88rem,
+".cards__item--buttonLightgreen" 1.6rem 400 2.88rem;
+
+@each $name , $font-size , $font-weight , $line-height in $typography {
+    #{$name}{
+        font-size:$font-size;
+        font-weight: $font-weight;
+        line-height: $line-height;
+    }
+}

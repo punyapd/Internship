@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Table</title>
+    <style>
+      textarea {
+        resize: none;
+      }
+      table,
+      th,
+      td {
+        border: 1px solid black;
+      }
+      th,
+      td {
+        padding: 15px;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h2>HTML Learning</h2>
+      <nav>
+        <a href="#">Home</a>
+        <a href="#">About Us</a>
+        <a href="#">Support</a>
+        <a href="#">Gallery</a>
+        <a href="#">Contact</a>
+      </nav>
+    </header>
+    <main>
+      <hr />
+      <h1>Playing HTML Table</h1>
+      <hr />
+      <section>
+        <table>
+          <table style="width: 60%">
+            <thead>
+              <th colspan="3">Grocery Items Bills</th>
+            </thead>
+            <tbody>
+            <tr>
+              <td><b>Item Name</b></td>
+              <td><b>Quantity</b></td>
+              <td><b>Price</b></td>
+            </tr>
+            <tr>
+              <td>Potatoes</td>
+              <td>50</td>
+              <td>NRs.500.00</td>
+            </tr>
+            <tr>
+              <td>Nuts and Other Stuffs</td>
+              <td>100</td>
+              <td>NRs.1400.00</td>
+            </tr>
+            <tr>
+              <td>Green and Red Onions</td>
+              <td>30</td>
+              <td>NRs.2500.00</td>
+            </tr>
+            <tr>
+              <td colspan="2"><b>Total Price</b></td>
+              <td><b>NRs.3400.00</b></td>
+            </tr>
+        </tbody>
+          </table>
+        </table>
+      </section>
+      <section style="margin-top: 100px;">
+        <table style="width: 60%">
+          <thead>
+            <th colspan="3">Seminar</th>
+          </thead>
+          <tbody>
+            <tr>
+                <th>Day</th>
+                <th colspan="2">Schedule</th>
+            </tr>
+            
+            <tr>
+                <td rowspan="2">Monday</td>
+                <td>7:00 A.M</td>
+                <td>11:00 A.M</td>
+
+            </tr>
+            <tr>
+                <td>4:00 P.M</td>
+                <td>8:00 P.M</td>
+            </tr>
+
+            <tr>
+                <td rowspan="2">Tuesday</td>
+                <td>6:00 A.M</td>
+                <td>10:00 A.M</td>
+
+            </tr>
+            <tr>
+                <td>3:00 P.M</td>
+                <td>11:00 P.M</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+    </main>
+    <footer style="margin-top: 100px;">
+        <hr>
+        <p> &#169;&nbsp;Copyright. End of my First Project.</p>
+    </footer>
+  </body>
+</html>

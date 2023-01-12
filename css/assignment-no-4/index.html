@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Assmnt-4</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <p>
+        Block level elements occupy the entire width available irrespective of
+        their sufficiency. They always start in a new line and have top and
+        bottom margins. It does not contain any other elements next to it.<br />
+        Inline elements occupy only enough width that is sufficient to it and
+        allows other elements next to it which are inline. Inline elements
+        don&#39;t start from a new line and don&#39;t have top and bottom
+        margins as block elements have.
+      </p>
+      <h1>Example for showing block level elements</h1>
+      <div class="bg-color">
+        <p>This is a paragraph inside a div element.</p>
+        <ul>
+          <li>List item 1</li>
+          <li>List item 2</li>
+        </ul>
+      </div>
+
+      <p class="bg-color">This is a paragraph element.</p>
+
+      <h1 class="bg-color">This is a level 1 heading</h1>
+
+      <ol class="bg-color">
+        <li>ordered List item 1</li>
+        <li>ordered List item 2</li>
+        <li>ordered List item 3</li>
+      </ol>
+
+      <ul class="bg-color">
+        <li>Unordered List item 1</li>
+        <li>Unordered List item 2</li>
+        <li>Unordered List item 3</li>
+      </ul>
+
+      <form action="/submit-form" method="post" class="bg-color">
+        <label for="name">Name:</label><br />
+        <input type="text" id="name" name="name" /><br />
+        <label for="email">Email:</label><br />
+        <input type="text" id="email" name="email" /><br /><br />
+        <input type="submit" value="Submit" />
+      </form>
+      <br /><br />
+
+      <header class="bg-color">
+        <h1>Welcome to my website!</h1>
+      </header>
+
+      <footer class="bg-color">
+        <p>Copyright 2022</p>
+      </footer>
+
+      <blockquote class="bg-color">
+        "The best way to predict the future is to invent it." -Alan Kay
+      </blockquote>
+
+      <p>
+        <strong>Note : </strong>
+        From the above Example, 10 different block elements are used to show how
+        the block elements occupy the whole width and the margin they leave.
+      </p>
+
+      <h1>Example for showing inline level elements</h1>
+      <a
+        href="https://www.example.com"
+        class="bg-color"
+        style="padding-top: 10px"
+      >
+        Click here</a
+      >
+      <strong class="bg-color">I am strong and i am inline element.</strong>
+      <span class="bg-color">i am span and i am inline element .</span>
+      <span class="bg-color">A<sup>2</sup></span>
+      <button class="bg-color">Click me!</button>
+      <b class="bg-color">i am bold</b>
+      <i class="bg-color">i am Italic</i>
+      <input type="text" />
+      <label class="bg-color">name</label>
+      <small class="">i am small</small>
+      <p>
+        <strong>Note: </strong>From the above example 10 different inline level
+        elements are used that occupied only enough width and allowed other
+        elements to settle at their next without leaving the margin from top and bottom.
+      </p>
+    </div>
+  </body>
+</html>

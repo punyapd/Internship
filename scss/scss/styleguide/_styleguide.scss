@@ -1,0 +1,201 @@
+@import "../mixins/flex-column";
+@import "../mixins/typography";
+
+$color_items: "--white" $white, "--black" $black, "--armygreen" $army-green,
+  "--lightgreen" $light-green;
+.container {
+  @include flex-column(column, 10rem);
+
+ 
+}
+.styleguide__heading{
+    font-size:10rem;
+  }
+
+.horizontal-line {
+  width: 100%;
+  height: 2px;
+  background-color: rgb(168, 165, 165);
+}
+.styleguide {
+  @include flex-column(column, 4rem);
+  &__title {
+    @include typography(
+      $fontsize-h1,
+      $font-weight-h1,
+      $line-height-h1,
+      $h1-color
+    );
+  }
+
+  &__H1 {
+    @include flex-column(row, 10rem);
+    &__info {
+      @include flex-column(column, 0.8rem);
+
+      &__details {
+        @include typography(
+          $fontsize-body-1-regular,
+          $font-weight-body-1-regular,
+          $line-height-body-1-regular,
+          $h1-color
+        );
+      }
+    }
+
+    &__text {
+      @include typography(
+        $fontsize-h1,
+        $font-weight-h1,
+        $line-height-h1,
+        $h1-color
+      );
+    }
+  }
+
+  //   for h2
+
+  &__H2 {
+    @include flex-column(row, 10rem);
+    &__info {
+      @include flex-column(column, 0.8rem);
+
+      &__details {
+        @include typography(
+          $fontsize-body-1-regular,
+          $font-weight-body-1-regular,
+          $line-height-body-1-regular,
+          $h1-color
+        );
+      }
+
+      &__title {
+        @include typography(
+          $fontsize-h2,
+          $font-weight-h2,
+          $line-height-h2,
+          $h1-color
+        );
+      }
+    }
+
+    &__text {
+      @include typography(
+        $fontsize-h2,
+        $font-weight-h2,
+        $line-height-h2,
+        $h1-color
+      );
+    }
+  }
+
+  //   for body-1
+  &__body-1 {
+    @include flex-column(row, 10rem);
+    &__info {
+      @include flex-column(column, 0.8rem);
+
+      &__details {
+        @include typography(
+          $fontsize-body-1-regular,
+          $font-weight-body-1-regular,
+          $line-height-body-1-regular,
+          $h1-color
+        );
+      }
+
+      &__title {
+        @include typography(
+          $fontsize-body-1,
+          $font-weight-body-1,
+          $line-height-body-1,
+          $h1-color
+        );
+      }
+    }
+
+    &__text {
+      @include typography(
+        $fontsize-body-1,
+        $font-weight-body-1,
+        $line-height-body-1,
+        $h1-color
+      );
+    }
+  }
+
+  &__body-2 {
+    @include flex-column(row, 10rem);
+    &__info {
+      @include flex-column(column, 0.8rem);
+
+      &__details {
+        @include typography(
+          $fontsize-body-1-regular,
+          $font-weight-body-1-regular,
+          $line-height-body-1-regular,
+          $h1-color
+        );
+      }
+
+      &__title {
+        @include typography(
+          $fontsize-body2,
+          $font-weight-body2,
+          $line-height-body2,
+          $h1-color
+        );
+      }
+    }
+
+    &__text {
+      @include typography(
+        $fontsize-body2,
+        $font-weight-body2,
+        $line-height-body2,
+        $h1-color
+      );
+    }
+  }
+
+  &__color {
+    @include flex-column(column, 4em);
+    h1{
+        @include typography(
+            $fontsize-title,
+            $font-weight-title,
+            $line-height-title,
+            $h1-color
+          );
+    }
+  }
+
+  &__colors {
+    @include flex-column(row, 4em);
+    &__item {
+        @include flex-column(column, 1.2em);
+    @each $name, $color in $color_items {
+       
+        &#{$name} {
+          width: 15em;
+          height: 8em;
+          background-color: $color;
+          border-radius: 5em;
+          border: 0.1em solid rgb(164, 161, 161);
+        }
+      }//end of for each
+      &__code{
+        color:$light-black;
+        @include typography(
+            $fontsize-body-1-regular,
+            $font-weight-body-1-regular,
+            $line-height-body-1-regular,
+            $h1-color
+          );
+      }
+    } 
+  }
+}
+
+@import '../styleguide/icons';
+@import '../styleguide/effects';

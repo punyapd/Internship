@@ -1,0 +1,28 @@
+@import "../mixins/typography";
+
+.accordion-flush .accordion-item .accordion-button,
+.accordion-flush .accordion-item .accordion-button.collapsed {
+  font-size: 1.6rem;
+}
+.accordion-flush .accordion-item {
+  padding: 1rem;
+}
+.accordion-button {
+  &::after {
+    background-image: url("../../images/Plus.svg");
+  }
+  &:not(.collapsed) {
+    &::after {
+      background-image: url("../../images/Plus.svg");
+    }
+  }
+}
+
+.faq__title {
+  @include typography(6.4rem, 500, 0.95) {
+    font-family: MyFirstFontItalic;
+  }
+}
+.accrodion {
+  --bs-accordion-border-color: black;
+}

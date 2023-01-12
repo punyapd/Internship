@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Form</title>
+    <style>
+        textarea { resize: none; }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h2>HTML Learning</h2>
+      <nav>
+        <a href="#">Home</a>
+        <a href="#">About Us</a>
+        <a href="#">Support</a>
+        <a href="#">Gallery</a>
+        <a href="#">Contact</a>
+      </nav>
+    </header>
+    <main>
+      <hr />
+      <h1>HTML Forms</h1>
+      <hr />
+
+      <h3>Personal Details</h3>
+
+      <form>
+        <label>Name</label>
+        <input type="text" name="name" /><br /><br /><br />
+        <label>Email</label>
+        <input type="email" required /><br /><br /><br />
+        <label>Location</label>
+        <input type="text" required /><br /><br /><br />
+        <label>Gender</label>
+        <input type="radio" name="gender" value="male" />male
+        <input
+          type="radio"
+          name="gender"
+          value="female"
+        />female<br /><br /><br />
+        <label>Birth Date</label>
+        <input type="date" name="date" /><br /><br /><br />
+
+        <label>Country</label>
+
+        <select name="cars" id="cars">
+            <option value="select">Select a Contry</option>
+          <option value="Nepal">Nepal</option>
+          <option value="Australia">Australia</option>
+          <option value="UK">UK</option>
+          <option value="USA">USA</option>
+        </select><br /><br /><br />
+
+        <label>Country</label>
+        <textarea  rows="10" cols="50"></textarea><br/><br/><br/>
+        <input type="checkbox" style="margin-left: 60px;"> I want to recieve the Newsletter<br><br><br>
+        <button type="submit" style="background-color: #555;color: white; margin-left: 60px;" >submit</button>
+      </form>
+    </main>
+    <footer style="margin-top: 100px;">
+        <hr>
+        <p> &#169;&nbsp;Copyright. End of my First Project.</p>
+    </footer>
+  </body>
+</html>

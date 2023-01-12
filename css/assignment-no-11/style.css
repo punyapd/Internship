@@ -1,0 +1,38 @@
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width:100vw;
+    height:100vh;
+    
+}
+.box{
+    height:40px;
+    width:40px;
+    animation: gif 3s  infinite ;
+}
+
+@keyframes gif {
+      0%{
+        background-color: rgb(13, 167, 31);
+        border-radius: 50%;
+       
+      }
+     
+      50%{
+        transform: scale(2) rotate(-1turn);
+        border-radius: 0%;
+        background-color: pink;
+      
+       
+        
+      }
+      100%{
+        transform: rotate(-1turn);
+        border-radius: 50%;
+        background-color: rgb(13, 167, 31);
+      }
+     
+
+      
+}

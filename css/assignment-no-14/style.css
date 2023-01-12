@@ -1,0 +1,201 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans&display=swap");
+:root {
+  --primary: #7dd0ed;
+  --white: #ffffff;
+  --textcolor: #9a9a9a;
+  --secondary: #27a6d2;
+}
+body {
+  font-family: "Open Sans", sans-serif;
+  width: 100%;
+  height: 100vh;
+  box-sizing: border-box;
+  background-color: #f6f6f6;
+  margin: 0;
+  padding: 0;
+}
+
+h1,
+h2,
+p,
+h3 {
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  width: 70%;
+  margin: auto;
+  padding: 100px 0;
+}
+
+.features-card {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  column-gap: 3rem;
+  border-radius: 10px;
+}
+
+.features-card-item {
+  display: flex;
+  flex-direction: column;
+  border-radius: 20px;
+  box-sizing: border-box;
+  transition: 0.4s;
+  width: 30%;
+}
+
+.features-card-item__title {
+  display: flex;
+  font: bold;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--primary);
+  color: var(--white);
+  font-size: 32px;
+  padding: 10px 0;
+  font-weight: 700;
+  transition: all 0.5s;
+}
+
+.features-card-item-info {
+  background-color: var(--white);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  row-gap: 20px;
+  /* padding:35px  15px 60px 15px; */
+  height: 300px;
+}
+
+.features-card-item-price {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.features-card-item-price__amount {
+  font-size: 64px;
+  font-weight: 700;
+  transition: all 0.4s;
+}
+
+.features-card-item-price__period {
+  font-size: 24px;
+  font-weight: 400;
+  transition: all 0.4s;
+}
+.features-card-item__featureslist {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  row-gap: 5px;
+  font-size: 0.8rem;
+  font-weight: 400;
+  text-transform: capitalize;
+  color: var(--textcolor);
+  line-height: 1.2em;
+}
+.features-card-item__featureslist div {
+  align-self: center;
+}
+
+.progress-bars {
+  display: flex;
+  flex-direction: column;
+  row-gap: 30px;
+  background-color: var(--white);
+  margin: 100px auto;
+  padding: 60px 40px;
+  flex-basis: 90%;
+}
+
+.progress-bar-item {
+  display: flex;
+  flex-direction: column;
+  row-gap: 20px;
+}
+
+.progress-bar-labels {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+/* css for progress bars */
+.progress-container {
+  width: 100%;
+  height: 1em;
+  position: relative;
+  background-color: #f1f1f1;
+}
+.w3-progressbar--user {
+  background-color: var(--primary);
+  height: 100%;
+  position: absolute;
+  line-height: inherit;
+  width: 0%;
+  transition: 0.5s all;
+}
+.w3-progressbar--gb {
+  background-color: var(--primary);
+  height: 100%;
+  position: absolute;
+  line-height: inherit;
+  width: 0%;
+  transition: 0.5s all;
+}
+.w3-progressbar--project {
+  background-color: var(--primary);
+  height: 100%;
+  position: absolute;
+  line-height: inherit;
+  transition: 1s all;
+}
+.w3-round-xlarge {
+  border-radius: 16px;
+}
+
+.features-card-item:hover {
+  transform: scale(1.15);
+}
+
+.features-card-item:hover .features-card-item__title {
+  background-color: var(--secondary);
+}
+
+.features-card-item:hover .features-card-item-price__amount {
+  color: var(--secondary);
+}
+
+.features-card-item:hover .features-card-item-price__period {
+  color: var(--secondary);
+}
+
+.features-card-item:hover
+  ~ .progress-bars
+  .progress-bar-item
+  .progressbar
+  .progress-container
+  .w3-progressbar--project {
+  width: 50%;
+}
+
+.features-card-item:hover
+  ~ .progress-bars
+  .progress-bar-item
+  .progressbar
+  .progress-container
+  .w3-progressbar--user {
+  width: 20%;
+}
+
+.features-card-item:hover
+  ~ .progress-bars
+  .progress-bar-item
+  .progressbar
+  .progress-container
+  .w3-progressbar--gb {
+  width: 10%;
+}

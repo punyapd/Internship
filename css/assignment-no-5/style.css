@@ -1,0 +1,29 @@
+.wrapper1 {
+    display: flex;
+  }
+  .wrapper1 .box {
+    background-color: green;
+    width: 200px;
+    height: 200px;
+
+    border: 1px solid rgb(85, 81, 81);
+
+    display: inline-block;
+    font-size: 18px;
+  }
+
+  .wrapper {
+    font-size: 0;
+  }
+  .wrapper .box {
+    background-color: green;
+    width: 200px;
+    height: 200px;
+    border: 1px solid rgb(85, 81, 81);
+    display: inline-block;
+    font-size: 18px;
+  }
+  .main{
+    width:60%;
+    margin:20px auto;
+  }

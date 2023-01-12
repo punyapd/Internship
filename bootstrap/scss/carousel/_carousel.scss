@@ -1,0 +1,42 @@
+@import '../mixins/typography';
+.carousel-caption{
+    
+    top:50%;
+    left:50%;
+    transform: translate(-50% , -50%);
+    
+    &__heading{
+        @include typography(
+            3.1rem , 700 , 1.2
+        )
+    }
+
+    &__description{
+        @include typography(
+            1.8rem , 400 , 1.2
+        )
+    }
+    
+}
+
+.carousel-indicators [data-bs-target]{
+    height:3rem;
+    width:3rem;
+    border-radius: 50%;
+    &.active{
+        background-color: orange;
+    }
+}
+
+
+.carousel-item{
+  & .carousel__img{
+    img{
+        filter:brightness(0.5);
+    }
+  }
+}
+
+
+
+

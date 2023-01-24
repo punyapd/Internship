@@ -1,0 +1,69 @@
+.container {
+  width: 500px;
+  height: 500px;
+  background-color: white;
+  box-shadow: 0px 0px 28px -2px rgba(13,12,12,0.75);
+  border-radius: 30px;
+  position: absolute;
+  top:50%;
+  left: 50%;
+  transform: translate(-50% , -50%);
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: center;
+  padding-top:50px;
+  
+}
+
+.profile-pic__wrapper{
+    height:150px;
+    width:150px;
+    border-radius: 50%;
+    border:1px solid orange;
+    background: url('../20211104_103850.png');
+    background-size: cover;
+}
+
+.personal-info{
+    font-size: 36px;
+    color:#444444;
+    transition: all 0.5s;
+    margin-top: 40px;
+    margin-bottom: 40px;
+
+}
+
+.container:hover{
+    box-shadow: 0px 0px 28px -2px rgba(250, 118, 3, 0.75);
+
+}
+.personal-info:hover{
+    color:orange;
+
+}
+
+.social-media{
+    display: flex;
+    flex-direction: row;
+    column-gap: 20px;
+    text-align: center;
+    margin-top: 40px;
+    margin-left:70px;
+}
+
+i{
+    font-size: 24px;
+    transition:all 0.4s;
+    color:#444444;
+}
+
+i:hover{
+    color:orange;
+}
+
+h1 , h2 , h3 , h4 , h5 , h6 , p{
+    margin: 0;
+    padding: 0;
+}
+

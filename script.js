@@ -29,12 +29,19 @@ assignments = [
 //index page.
 
 let main = document.getElementById('main');
-
+let body = document.getElementsByTagName('body')
 let container = document.createElement('div');
+let seeProfile = document.createElement('a');
+seeProfile.setAttribute('href' , 'pages/profile.html')
+
+seeProfile.setAttribute('class' , 'see-profile')
+seeProfile.setAttribute('title' , 'see-profile')
 
 container.setAttribute('class' , 'container');
 
 main.appendChild(container);
+body[0].appendChild(seeProfile)
+
 
 let h1 = document.createElement('h1');
 let h1TextNode = document.createTextNode("Internship Assignments");
@@ -77,4 +84,5 @@ assignments.map((item)=> {
 
 
 container.appendChild(assmntCards) //append card list in container 
+
 

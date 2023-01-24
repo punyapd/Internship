@@ -48,3 +48,22 @@ h1{
   gap:10px;
   padding:20px 0;
 }
+
+.link{
+    width:80%;
+    margin:auto;
+    background-color: #333333;
+    text-decoration: none;
+    color:white;
+    padding:20px;
+    text-align: center;
+    border-radius: 20px;
+    border:1px solid gray;
+    transition:all 0.3s;
+
+}
+
+.link:hover{
+    background-color: #ffffff;
+    color:black;
+}

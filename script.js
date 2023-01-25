@@ -24,6 +24,10 @@ assignments = [
         topic:"FRONTEND FINAL PROJECT",
         link:"./pages/finalfrontend.html"
     },
+    {
+        topic:"JAVASCRIPT",
+        link:"./pages/javascript.html"
+    },
 ]
 
 //index page.

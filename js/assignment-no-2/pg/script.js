@@ -5,7 +5,7 @@ inputOptions = [
       {
         type: "number",
         id: "length",
-        min: 4,
+        min: 8,
         max: 20,
         value: 10,
       },

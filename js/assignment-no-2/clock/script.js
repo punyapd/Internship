@@ -126,6 +126,7 @@ function stopwatch() {
 
   function update() {
     let currentTime = Date.now();
+
     time += currentTime - startTime;
     startTime = currentTime;
     let formattedTime = formatTime(time);
@@ -138,7 +139,7 @@ function stopwatch() {
     let milliseconds = time % 1000;
     minutes = minutes.toString().padStart(2, "0");
     seconds = seconds.toString().padStart(2, "0");
-    milliseconds = milliseconds.toString().padStart(3, "0");
+    milliseconds = milliseconds.toString();
     return `${minutes}:${seconds}:${milliseconds}`;
   }
 
@@ -153,15 +154,13 @@ function toggleClock() {
   clockDOM.style.display = "block";
 
   stopWatchDOM.style.display = "none";
-  clockBtn.style.backgroundColor = 'aquamarine';
-  stopWatchBtn.style.backgroundColor = 'white';
-  console.log("clock clicked");
+  clockBtn.style.backgroundColor = "aquamarine";
+  stopWatchBtn.style.backgroundColor = "white";
 }
 
 function toggleStopwatch() {
   stopWatchDOM.style.display = "block";
   clockDOM.style.display = "none";
-  clockBtn.style.backgroundColor = 'white';
-  stopWatchBtn.style.backgroundColor = 'aquamarine';
-  console.log("stopwatchclicked");
+  clockBtn.style.backgroundColor = "white";
+  stopWatchBtn.style.backgroundColor = "aquamarine";
 }

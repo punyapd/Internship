@@ -78,4 +78,8 @@ body {
     background-color: #5bc0be;
     color: #ffffff;
   }
+
+  #result{
+    font-size:24px;
+  }
   

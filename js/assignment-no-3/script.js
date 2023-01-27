@@ -82,6 +82,7 @@ function carousel(carouselContainer) {
       newIndicator = indicators[0]
       slides[0].classList.add("active-class");
       activeSlide.classList.remove("active-class");
+      newIndicator.classList.add("active-indicator")
     }
 
     moveSlide(activeSlide, nextSlide, carouselImageWrapper);

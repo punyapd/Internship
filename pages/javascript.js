@@ -14,6 +14,22 @@ assignment = [
         "https://github.com/punyapd/Internship/tree/master/js/assignment-no-2/pg",
       demoLink: "https://punyapd.github.io/Internship/js/assignment-no-2/pg/index.html",
     },
+    {
+      number: 2,
+  
+      title: "clock and stopwatch",
+      codeLink:
+        "https://github.com/punyapd/Internship/tree/master/js/assignment-no-2/clock",
+      demoLink: "https://punyapd.github.io/Internship/js/assignment-no-2/clock/index.html",
+    },
+    {
+      number: 3,
+  
+      title: "Image carousel",
+      codeLink:
+        "https://github.com/punyapd/Internship/tree/master/js/assignment-no-3",
+      demoLink: "https://punyapd.github.io/Internship/js/assignment-no-3/index.html",
+    },
    
   ];
   let main = document.getElementById("main");

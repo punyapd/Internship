@@ -126,8 +126,10 @@ function stopwatch() {
 
   function update() {
     let currentTime = Date.now();
-
+    console.log('currrent time: ' , currentTime)
     time += currentTime - startTime;
+    console.log('start time: ' , startTime)
+    console.log("time: " , time)
     startTime = currentTime;
     let formattedTime = formatTime(time);
     document.getElementById("time").innerHTML = formattedTime;

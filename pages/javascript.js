@@ -40,7 +40,7 @@ assignment = [
   main.appendChild(container);
   
   let h1 = document.createElement("h1");
-  let h1TextNode = document.createTextNode("CSS Assignments");
+  let h1TextNode = document.createTextNode("JS Assignments");
   h1.appendChild(h1TextNode);
   container.appendChild(h1);
   

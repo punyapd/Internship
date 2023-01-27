@@ -109,13 +109,14 @@ function carousel(carouselContainer) {
     let prevSlide = activeSlide.previousElementSibling;
     const prevSlideIndex = slides.findIndex((slide) => slide == prevSlide);
     let activeIndicator = document.querySelector('.active-indicator');
-    console.log('active indicaor : ' , activeIndicator)
     let newIndicator = activeIndicator.previousElementSibling;
     if (prevSlideIndex == -1) {
       prevSlide = slides[0];
       activeIndicator = indicators[0];
       newIndicator = indicators[0];
     }
+    console.log('active indicaor : ' , activeIndicator)
+
     moveSlide(activeSlide, prevSlide, carouselImageWrapper);
     updateIndicators(activeIndicator , newIndicator);
 

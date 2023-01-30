@@ -44,7 +44,7 @@ function instance(container){
   setInterval(() => {
     moveBoxes(boxes);
     detectCollision(boxes);
-  }, 100);
+  }, 10);
 }
 
 function createBox(parent) {

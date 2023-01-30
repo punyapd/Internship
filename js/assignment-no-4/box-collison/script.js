@@ -7,7 +7,28 @@ const NUMBER_OF_BOXES = 10;
 
 function main() {
   let body = document.querySelector("body");
+
   let container = createContainer(body);
+  let container1 = createContainer(body)
+  container1.classList.add('container1')
+  //running first instance
+   instance(container);
+  
+   //running second instance
+   instance(container1)
+  
+}
+
+//function for creating the main container
+function createContainer(parent) {
+  let container = document.createElement("div");
+  container.setAttribute("class", "container");
+  parent.appendChild(container);
+  return container;
+}
+
+//function for running different instances
+function instance(container){
   let boxes = [];
   for (i = 0; i < NUMBER_OF_BOXES; i++) {
     let box = createBox(container);
@@ -26,14 +47,6 @@ function main() {
   }, 100);
 }
 
-//function for creating the main container
-function createContainer(parent) {
-  let container = document.createElement("div");
-  container.setAttribute("class", "container");
-  parent.appendChild(container);
-  return container;
-}
-
 function createBox(parent) {
   let boxElement = document.createElement("div");
   boxElement.style.width = BOX_WIDTH + "px";
@@ -47,8 +60,8 @@ function createBox(parent) {
     element: boxElement,
     directionX: 1,
     directionY: 1,
-    INITIAL_POSTION_X: parseInt(boxElement.style.left),
-    INITIAL_POSTION_Y: parseInt(boxElement.style.top),
+    INITIAL_POSITION_X: parseInt(boxElement.style.left),
+    INITIAL_POSITION_Y: parseInt(boxElement.style.top),
   };
 }
 
@@ -60,19 +73,19 @@ function drawBox(parent, boxElement) {
 //function for checking the overlap of randomly generated boxes
 function checkOverlap(box1, box2) {
   if (
-    box1.INITIAL_POSTION_X <= box2.INITIAL_POSTION_X &&
-    box1.INITIAL_POSTION_X + BOX_WIDTH >= box2.INITIAL_POSTION_X + BOX_WIDTH &&
-    box1.y <= box2.INITIAL_POSTION_Y &&
-    box1.INITIAL_POSTION_Y + BOX_HEIGHT >= box2.INITIAL_POSTION_Y + BOX_HEIGHT
+    box1.INITIAL_POSITION_X <= box2.INITIAL_POSITION_X &&
+    box1.INITIAL_POSITION_X + BOX_WIDTH >= box2.INITIAL_POSITION_X + BOX_WIDTH &&
+    box1.y <= box2.INITIAL_POSITION_Y &&
+    box1.INITIAL_POSITION_Y + BOX_HEIGHT >= box2.INITIAL_POSITION_Y + BOX_HEIGHT
   ) {
     return true;
   }
   // Check for partial overlap
   if (
-    box1.INITIAL_POSTION_X < box2.INITIAL_POSTION_X + BOX_WIDTH &&
-    box1.INITIAL_POSTION_X + BOX_WIDTH > box2.INITIAL_POSTION_X &&
-    box1.INITIAL_POSTION_Y < box2.INITIAL_POSTION_Y + BOX_HEIGHT &&
-    box1.INITIAL_POSTION_Y + BOX_HEIGHT > box2.INITIAL_POSTION_Y
+    box1.INITIAL_POSITION_X < box2.INITIAL_POSITION_X + BOX_WIDTH &&
+    box1.INITIAL_POSITION_X + BOX_WIDTH > box2.INITIAL_POSITION_X &&
+    box1.INITIAL_POSITION_Y < box2.INITIAL_POSITION_Y + BOX_HEIGHT &&
+    box1.INITIAL_POSITION_Y + BOX_HEIGHT > box2.INITIAL_POSITION_Y
   ) {
     return true;
   }
@@ -99,12 +112,12 @@ function moveBoxes(boxes) {
       box.directionY = 1;
     }
 
-    let NEW_POSITION_X = box.INITIAL_POSTION_X + box.directionX * SPEED;
-    let NEW_POSITION_Y = box.INITIAL_POSTION_Y + box.directionY * SPEED;
+    let NEW_POSITION_X = box.INITIAL_POSITION_X + box.directionX * SPEED;
+    let NEW_POSITION_Y = box.INITIAL_POSITION_Y + box.directionY * SPEED;
     box.element.style.left = NEW_POSITION_X + "px";
     box.element.style.top = NEW_POSITION_Y + "px";
-    box.INITIAL_POSTION_X = NEW_POSITION_X;
-    box.INITIAL_POSTION_Y = NEW_POSITION_Y;
+    box.INITIAL_POSITION_X = NEW_POSITION_X;
+    box.INITIAL_POSITION_Y = NEW_POSITION_Y;
   });
 }
 
@@ -134,10 +147,10 @@ function detectCollision(boxes) {
 //function for horizontal collison detection.
 function checkHorzontalCollision(box1, box2) {
   if (
-    box1.INITIAL_POSTION_X < box2.INITIAL_POSTION_X + BOX_WIDTH &&
-    box1.INITIAL_POSTION_X + BOX_WIDTH > box2.INITIAL_POSTION_X &&
-    box1.INITIAL_POSTION_Y < box2.INITIAL_POSTION_Y + BOX_HEIGHT &&
-    BOX_HEIGHT + box1.INITIAL_POSTION_Y > box2.INITIAL_POSTION_Y
+    box1.INITIAL_POSITION_X < box2.INITIAL_POSITION_X + BOX_WIDTH &&
+    box1.INITIAL_POSITION_X + BOX_WIDTH > box2.INITIAL_POSITION_X &&
+    box1.INITIAL_POSITION_Y < box2.INITIAL_POSITION_Y + BOX_HEIGHT &&
+    BOX_HEIGHT + box1.INITIAL_POSITION_Y > box2.INITIAL_POSITION_Y
   ) {
     return true;
   }
@@ -146,10 +159,10 @@ function checkHorzontalCollision(box1, box2) {
 //function for vertical collilson detection.
 function checkVerticalCollision(box1, box2) {
   if (
-    box1.INITIAL_POSTION_Y < box2.INITIAL_POSTION_Y + BOX_HEIGHT &&
-    box1.INITIAL_POSTION_Y + BOX_HEIGHT > box2.INITIAL_POSTION_Y &&
-    box1.INITIAL_POSTION_X < box2.INITIAL_POSTION_X + BOX_WIDTH &&
-    BOX_WIDTH + box1.INITIAL_POSTION_X > box2.INITIAL_POSTION_X
+    box1.INITIAL_POSITION_Y < box2.INITIAL_POSITION_Y + BOX_HEIGHT &&
+    box1.INITIAL_POSITION_Y + BOX_HEIGHT > box2.INITIAL_POSITION_Y &&
+    box1.INITIAL_POSITION_X < box2.INITIAL_POSITION_X + BOX_WIDTH &&
+    BOX_WIDTH + box1.INITIAL_POSITION_X > box2.INITIAL_POSITION_X
   ) {
     return true;
   }

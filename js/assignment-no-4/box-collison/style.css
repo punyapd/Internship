@@ -3,6 +3,8 @@ html {
 }
 body{
     margin: 0;
+    display: flex;
+    flex-direction: row;
 }
 .container {
   height: 60rem;
@@ -10,6 +12,15 @@ body{
   background-color: aqua;
   border: 2px solid black;
   margin: 0 auto;
+  position: relative;
+}
+
+.container1{
+   height: 60rem;
+  width: 60rem;
+  background-color: aqua;
+  border: 2px solid black;
+  margin: 10px auto;
   position: relative;
 }
 

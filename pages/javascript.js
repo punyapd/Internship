@@ -50,6 +50,16 @@ assignment = [
     demoLink:
       "https://punyapd.github.io/Internship/js/assignment-no-4/ant-smasher/index.html",
   },
+
+  {
+    number: 5.1,
+
+    title: "Car Lane Game",
+    codeLink:
+      "https://github.com/punyapd/Internship/tree/master/js/assignment-no-5/car-Lane-Game",
+    demoLink:
+      "https://punyapd.github.io/Internship/js/assignment-no-5/car-Lane-Game/index.html",
+  },
 ];
 let main = document.getElementById("main");
 

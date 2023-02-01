@@ -1,30 +1,53 @@
 const canvas = document.getElementById("canvas");
 const ctx = canvas.getContext("2d");
-
-let carX = canvas.width / 2;
-let carY = canvas.height - 50;
 let laneWidth = canvas.width / 3;
+
+let carX = laneWidth;
+let carY = canvas.height - 200;
 let obstacleX = Math.floor(Math.random() * 3) * laneWidth;
 let obstacleY = 0;
-let SCORE = 0;
-const CAR_SPEED = 20;
+const CAR_WIDTH = OBSTACLE_WIDTH = 75
+let score = 0;
+const CAR_SPEED = CAR_WIDTH;
 let OBSTACLE_SPEED = 5;
-let runGame;
 const restartX = canvas.width / 3;
 const restartY = canvas.height / 2 + 100;
 const restartWidth = 200;
 const restartHeight = 50;
 
 
+let gameState = "start";
+
+let car = new Image();
+car.src = "./images/car.png";
+let randomObstacle;
+let obstacles = [
+  "./images/obstacle1.png",
+  "./images/obstacle2.png",
+  "./images/obstacle3.png",
+];
+
+// randomObstacle = Math.floor(Math.random() * obstacles.length);
+
+let obstacle = new Image();
+
 canvas.addEventListener("click", (event) => handleRestartClick(event));
+obstacle.src = createRandomObstacle();
 
 function main() {
   ctx.clearRect(0, 0, canvas.width, canvas.height);
-  drawCar();
-  drawObstacle();
-  moveObstacle();
-  detectCollison();
-  scoreBoard();
+
+  if (gameState === "start") {
+    drawCar();
+    drawObstacle();
+    moveObstacle();
+    detectCollison();
+    scoreBoard();
+    requestAnimationFrame(main);
+  }
+  if (gameState === "end") {
+    endGame();
+  }
 }
 
 document.addEventListener("keydown", moveCar);
@@ -32,21 +55,20 @@ document.addEventListener("keydown", moveCar);
 function moveCar(event) {
   if (event.key === "ArrowLeft" && carX > 0) {
     carX = carX - CAR_SPEED;
-  } else if (
-    event.key === "ArrowRight" &&
-    carX < canvas.width - laneWidth/2
-  ) {
+  } else if (event.key === "ArrowRight" && carX < canvas.width - CAR_WIDTH) {
     carX = carX + CAR_SPEED;
   }
 }
 
 function drawCar() {
   ctx.fillStyle = "green";
-  ctx.fillRect(carX, carY, laneWidth / 2, 50);
+
+  ctx.drawImage(car, carX, carY, CAR_WIDTH, 200);
 }
 
 function drawObstacle() {
-  ctx.fillRect(obstacleX, obstacleY, laneWidth, 50);
+  console.log("obstacle", obstacle.src);
+  ctx.drawImage(obstacle, obstacleX, obstacleY, OBSTACLE_WIDTH, 200);
 }
 
 function moveObstacle() {
@@ -54,74 +76,72 @@ function moveObstacle() {
   if (obstacleY >= canvas.height) {
     obstacleY = 0;
     obstacleX = Math.floor(Math.random() * 3) * laneWidth;
-    SCORE++;
+
+    score++;
   }
 }
 //detect collison between obstacle and car.
 function detectCollison() {
   if (
-    carX < obstacleX + laneWidth &&
-    carX + laneWidth > obstacleX &&
-    carY < obstacleY + 50 &&
-    50 + carY > obstacleY
-  ) 
-  {
-    endGame();
+    carX < obstacleX + CAR_WIDTH &&
+    carX + CAR_WIDTH > obstacleX &&
+    carY < obstacleY + 200 &&
+    200 + carY > obstacleY
+  ) {
+    cancelAnimationFrame(main);
+    gameState = "end";
   }
 }
 
 // shwoing score board
 function scoreBoard() {
   ctx.font = "40px Arial";
-  ctx.fillText("Score: " + SCORE, 10, 30);
+  ctx.fillText("score: " + score, 10, 30);
 }
 
 //function for end game
 function endGame() {
-  clearInterval(runGame);
   ctx.clearRect(0, 0, canvas.width, canvas.height);
   ctx.fillStyle = "red";
-  ctx.fillText("GAME OVER", canvas.width / 3, canvas.height / 2);
+  ctx.fillText("GAME OVER", canvas.width / 4, canvas.height / 2);
   ctx.fillText(
-    "YOUR SCORE :" + SCORE,
-    canvas.width / 3,
-    canvas.height / 2 + 50
-  );
-
-  ctx.fillText(
-    "YOUR SCORE :" + SCORE,
-    canvas.width / 3,
+    "YOUR score :" + score,
+    canvas.width / 4,
     canvas.height / 2 + 50
   );
 
   ctx.fillStyle = "green";
   ctx.fillRect(restartX, restartY, 200, 50);
   ctx.fillStyle = "black";
-  ctx.fillText("Restart", canvas.width / 3 + 30, canvas.height / 2 + 140);
+  ctx.fillText("Restart", canvas.width / 4 + 50, canvas.height / 2 + 140);
 }
 
 function handleRestartClick(event) {
   let x = event.clientX - canvas.offsetLeft;
   let y = event.clientY - canvas.offsetTop;
-  console.log("x , y", x, y);
-  console.log("event:", event);
   if (
     x >= restartX &&
     x <= restartX + restartWidth &&
     y >= restartY &&
     y <= restartY + restartHeight
   ) {
-    // ctx.clearRect(0 , 0 ,CANVAS_WIDTH , canvas-CANVAS_HEIGHT)
-    SCORE = 0;
-    // main()
+    cancelAnimationFrame(main);
+
+    window.location.reload();
   }
 }
 
 //function updateLevel
-function updateLevel(SCORE){
-if(SCORE > 10)
-  OBSTACLE_SPEED += 3
+function updateLevel(score) {
+  if (score > 10) OBSTACLE_SPEED += 3;
 }
 
+//function generate random obstacle
+function createRandomObstacle() {
+  randomObstacle = Math.floor(Math.random() * obstacles.length);
+  console.log("random: ", randomObstacle);
+  return obstacles[randomObstacle];
+}
 
-runGame = setInterval(main , 30);
+// runGame = setInterval(main , 30);
+main();

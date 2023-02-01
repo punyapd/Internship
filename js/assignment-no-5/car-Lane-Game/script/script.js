@@ -6,15 +6,14 @@ let carX = laneWidth;
 let carY = canvas.height - 200;
 let obstacleX = Math.floor(Math.random() * 3) * laneWidth;
 let obstacleY = 0;
-const CAR_WIDTH = OBSTACLE_WIDTH = laneWidth
+const CAR_WIDTH = (OBSTACLE_WIDTH = laneWidth);
 let score = 0;
 const CAR_SPEED = CAR_WIDTH;
-let OBSTACLE_SPEED = 5;
-const restartX = canvas.width / 3;
-const restartY = canvas.height / 2 + 100;
+let OBSTACLE_SPEED = 10;
+const restartX = canvas.width / 3 - 40;
+const restartY = canvas.height / 4 + 100;
 const restartWidth = 200;
 const restartHeight = 50;
-
 
 let gameState = "start";
 
@@ -43,8 +42,10 @@ function main() {
     moveObstacle();
     detectCollison();
     scoreBoard();
+    updateLevel();
     requestAnimationFrame(main);
   }
+
   if (gameState === "end") {
     endGame();
   }
@@ -67,7 +68,6 @@ function drawCar() {
 }
 
 function drawObstacle() {
-  console.log("obstacle", obstacle.src);
   ctx.drawImage(obstacle, obstacleX, obstacleY, OBSTACLE_WIDTH, 200);
 }
 
@@ -103,17 +103,26 @@ function scoreBoard() {
 function endGame() {
   ctx.clearRect(0, 0, canvas.width, canvas.height);
   ctx.fillStyle = "red";
-  ctx.fillText("GAME OVER", canvas.width / 4, canvas.height / 2);
+  ctx.fillText("GAME OVER !!!!", canvas.width / 4, canvas.height / 4);
   ctx.fillText(
     "YOUR score :" + score,
     canvas.width / 4,
-    canvas.height / 2 + 50
+    canvas.height / 4 + 50
   );
+  
+  highscore = localStorage.getItem("highscore");
+  if (score > highscore) {
+    localStorage.setItem("highscore", score);
+  }
 
   ctx.fillStyle = "green";
   ctx.fillRect(restartX, restartY, 200, 50);
   ctx.fillStyle = "black";
-  ctx.fillText("Restart", canvas.width / 4 + 50, canvas.height / 2 + 140);
+  ctx.fillText("Restart", canvas.width / 4 + 50, canvas.height / 4 + 140);
+
+  
+  ctx.fillStyle = "white";
+  ctx.fillText("HighScore:  " + highscore, canvas.width / 4, restartY + 140);
 }
 
 function handleRestartClick(event) {
@@ -133,25 +142,19 @@ function handleRestartClick(event) {
 
 //function updateLevel
 function updateLevel(score) {
-
-  if (score > 10) 
-  {
-    OBSTACLE_SPEED += 10;
+  if (score == 10) {
+    OBSTACLE_SPEED += 3;
   }
-  if(score >20) 
-  {OBSTACLE_SPEED += 10;}
-
-  console.log('obstacle speed: ' , OBSTACLE_SPEED)
+  if (score == 20) {
+    OBSTACLE_SPEED += 3;
+  }
 }
 
 //function generate random obstacle
 function createRandomObstacle() {
   randomObstacle = Math.floor(Math.random() * obstacles.length);
-  console.log("random: ", randomObstacle);
   return obstacles[randomObstacle];
 }
 
 // runGame = setInterval(main , 30);
 main();
-updateLevel(score);
-

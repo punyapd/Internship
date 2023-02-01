@@ -1,0 +1,6 @@
+canvas{
+    border:1px solid black;
+    margin-left: 450px;
+    background:url('../images/lane.png');
+    background-size: cover;
+}

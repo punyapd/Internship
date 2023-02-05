@@ -88,7 +88,7 @@ function detectCollison() {
     carY < obstacleY + 200 &&
     200 + carY > obstacleY
   ) {
-    cancelAnimationFrame(main);
+    // cancelAnimationFrame(main);
     gameState = "end";
   }
 }
@@ -109,7 +109,7 @@ function endGame() {
     canvas.width / 4,
     canvas.height / 4 + 50
   );
-  
+
   highscore = localStorage.getItem("highscore");
   if (score > highscore) {
     localStorage.setItem("highscore", score);
@@ -120,7 +120,6 @@ function endGame() {
   ctx.fillStyle = "black";
   ctx.fillText("Restart", canvas.width / 4 + 50, canvas.height / 4 + 140);
 
-  
   ctx.fillStyle = "white";
   ctx.fillText("HighScore:  " + highscore, canvas.width / 4, restartY + 140);
 }
@@ -134,9 +133,10 @@ function handleRestartClick(event) {
     y >= restartY &&
     y <= restartY + restartHeight
   ) {
-    cancelAnimationFrame(main);
+    // cancelAnimationFrame(main);
 
     window.location.reload();
+    // requestAnimationFrame(main)
   }
 }
 

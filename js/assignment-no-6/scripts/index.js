@@ -1,9 +1,11 @@
 let canvas = document.getElementById("flappy-bird");
 let ctx = canvas.getContext("2d");
+
 CANVAS_HEIGHT = 700;
 CANVAS_WIDTH = 400;
 canvas.width = CANVAS_WIDTH;
 canvas.height = CANVAS_HEIGHT;
+
 const restartX = canvas.width / 3;
 const restartY = canvas.height / 2 + 50;
 const restartHeight = 100;
@@ -47,17 +49,18 @@ let restartData = {
   height: restartHeight,
 };
 
-let game = new Game(canvas, sprites, ctx, restartData);
+// let game_status ="start"
 
+let game = new Game(canvas, sprites, ctx, restartData);
 game.start();
 
 function gameLoop() {
-  if (game.game_status == "start") {
+  if (game.gameStatus == "start") {
     ctx.clearRect(0, 0, CANVAS_WIDTH, CANVAS_HEIGHT);
 
     //draw
     game.draw();
-    
+
     //update
     game.update();
 
@@ -66,7 +69,7 @@ function gameLoop() {
     requestAnimationFrame(gameLoop);
   }
 
-  if (game.game_status == "end") {
+  if (game.gameStatus == "end") {
     cancelAnimationFrame(gameLoop);
     game.end(gameLoop);
   }

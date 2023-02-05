@@ -21,6 +21,7 @@ class Bird {
     this.gravitySpeed = 0;
     this.bluebird = bluebird;
     this.BASE_HEIGHT = BASE_HEIGHT;
+    this.isReady = false;
   }
 
   draw() {

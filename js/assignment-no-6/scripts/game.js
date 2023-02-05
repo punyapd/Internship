@@ -4,6 +4,7 @@ const BIRD_WIDTH = 30;
 const BIRD_HEIGHT = 30;
 BASE_HEIGHT = 80;
 let gameScore = 0;
+let state = false;
 
 let i;
 class Game {
@@ -11,7 +12,7 @@ class Game {
     this.canvas = canvas;
     this.ctx = ctx;
     this.sprites = sprites;
-    this.game_status = "start";
+    this.gameStatus = "start";
     this.pipes = [];
     this.restartData = restartData;
   }
@@ -39,11 +40,13 @@ class Game {
     );
 
     // genrate pipes in certain interval
+
     setInterval(this.generatePipes.bind(this), 2500);
 
     let bird = this.bird;
+    let gameStatus = this.gameStatus;
     //adding controls to the bird.
-    this.game_status = this.handleGameStart(this.game_status, bird);
+    let start = this.handleGameStart(bird, gameStatus);
 
     //base object initalization
     this.base = new Base(
@@ -76,7 +79,9 @@ class Game {
   update() {
     this.base.update();
     // console.log('this' , this.game_status);
-    this.bird.update(this.game_status);
+    if (this.bird.isReady) {
+      this.bird.update(this.gameStatus);
+    }
     for (i = 0; i < this.pipes.length; i++) {
       let isCollison = this.pipes[i].update(
         this.pipes,
@@ -85,7 +90,7 @@ class Game {
         gameScore
       );
       if (isCollison) {
-        this.game_status = "end";
+        this.gameStatus = "end";
       }
     }
   }
@@ -94,15 +99,14 @@ class Game {
   draw() {
     //background draw
     this.bg.draw();
+
+    this.bird.draw(); //draw bird
     // draw  pipes
     for (i = 0; i < this.pipes.length; i++) {
       this.pipes[i].draw();
     }
-
     //draw basse
     this.base.draw();
-
-    this.bird.draw(); //draw bird
   }
 
   //function for generating pipes
@@ -128,20 +132,25 @@ class Game {
   //function for showing score
   showScore() {
     this.ctx.fillStyle = "black";
-    this.ctx.font = "36px verdana"
-    this.ctx.fillText("SCORE :" + parseInt(gameScore), 100, this.canvas.height-30);
+    this.ctx.font = "36px verdana";
+    this.ctx.fillText(
+      "SCORE :" + parseInt(gameScore),
+      100,
+      this.canvas.height - 30
+    );
     // this.ctx.fillRect
   }
   //handle game start
-  handleGameStart(game_status, bird) {
+  handleGameStart(bird, gameStatus) {
     window.addEventListener("keydown", function (event) {
       if (event.key == " ") {
-        game_status = "start";
-        bird.gravitySpeed = 0;
-        bird.positionY -= 60;
+        if (bird.isReady) {
+          bird.gravitySpeed = 0;
+          bird.positionY -= 60;
+        }
+        bird.isReady = true;
       }
     });
-    return game_status;
   }
 
   //handling the game restart

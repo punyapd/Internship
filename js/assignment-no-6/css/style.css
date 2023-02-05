@@ -1,9 +1,20 @@
 body{
     margin: 0;
     padding:0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 #flappy-bird{
     /* border:1px solid black; */
-    margin:0 450px;
+    margin:0 auto;
+}
+
+.start-screen{
+    background-color: red;
+    height:700px;
+    width:400px;
+    background:url('../images/background-day.png');
+    background-size:cover;
 }

@@ -44,14 +44,15 @@ class Pipe {
     for (let i in pipes) {
       collison = this.checkCollision(pipes[i], baseY, bird, gameScore);
       //update score
-      if (pipes[i].x + pipes[i].width < bird.positionX && !this.scored && !collison) {
+      if (pipes[i].x + pipes[i].width < bird.positionX && !this.scored &&!collison) {
         this.scored = true;
         gameScore += 1;
         console.log("score", gameScore);
       }
       //remove pipe from array.
-      if (pipes[i].x < -pipes[i].width) {
+      if (pipes[i].x < -pipes[i].width || !bird.isReady) {
         pipes.splice(i, 1);
+        console.log("spliced")
       }
 
     }

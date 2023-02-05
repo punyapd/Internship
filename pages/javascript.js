@@ -61,13 +61,12 @@ assignment = [
       "https://punyapd.github.io/Internship/js/assignment-no-5/car-Lane-Game/index.html",
   },
   {
-    number: 5.2,
+    number: 6,
 
-    title: "Car Lane Game",
+    title: "Flappy Bird",
     codeLink:
-      "https://github.com/punyapd/Internship/tree/master/js/assignment-no-5/car-Lane-Game",
-    demoLink:
-      "https://punyapd.github.io/Internship/js/assignment-no-5/car-Lane-Game/index.html",
+      "https://github.com/punyapd/Internship/tree/master/js/assignment-no-6",
+    demoLink:"https://punyapd.github.io/Internship/js/assignment-no-6/index.html"
   },
 ];
 let main = document.getElementById("main");

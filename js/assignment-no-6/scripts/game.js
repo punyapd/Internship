@@ -159,10 +159,7 @@ class Game {
       let rect = canvas.getBoundingClientRect();
       let x = event.clientX - rect.x;
       let y = event.clientY - rect.y;
-      console.log("ol , ot", canvas.offsetLeft, canvas.offsetTop);
-      console.log("x, y", x, y);
-      console.log("cx , cy", event.clientX, event.clientY);
-      console.log("restart data:", restartData);
+     
       if (
         x >= restartData.x &&
         x <= restartData.x + restartData.width &&

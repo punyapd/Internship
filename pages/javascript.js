@@ -68,6 +68,14 @@ assignment = [
       "https://github.com/punyapd/Internship/tree/master/js/assignment-no-6",
     demoLink:"https://punyapd.github.io/Internship/js/assignment-no-6/index.html"
   },
+  {
+    number: 7,
+
+    title: "Block Escape(final)",
+    codeLink:
+      "https://github.com/punyapd/Internship/tree/master/js/final-assignment-js/",
+    demoLink:"https://punyapd.github.io/Internship/js/final-assignment-js/index.html"
+  },
 ];
 let main = document.getElementById("main");
 

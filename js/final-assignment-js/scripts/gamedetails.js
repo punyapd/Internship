@@ -32,12 +32,13 @@ class GameDetails {
   }
 
   displayMoves() {
-    let record = window.localStorage.getItem('recordMoves');
-    if((record =='[') || (record == null)){
-        record = ""
-    }
-    else{
-        record = JSON.parse(window.localStorage.getItem('recordMoves'))[this.game.currentLevel];
+    let record = window.localStorage.getItem("recordMoves");
+    if (record == "[" || record == null) {
+      record = "";
+    } else {
+      record = JSON.parse(window.localStorage.getItem("recordMoves"))[
+        this.game.currentLevel
+      ];
     }
     // record = record == undefined ? record[this.game.currentLevel] : ""
     this.ctx.fillStyle = "white";
@@ -61,14 +62,25 @@ class GameDetails {
 
     this.ctx.strokeRect(200, 690, 50, 50);
     this.ctx.drawImage(this.sprites.homeImage, 210, 700, 30, 30);
-
+    
+    this.ctx.beginPath()
     this.ctx.strokeRect(300, 690, 50, 50);
     this.ctx.drawImage(this.sprites.pauseImage, 310, 700, 30, 30);
 
-    this.ctx.strokeRect(400, 690, 50, 50);
-    this.ctx.drawImage(this.sprites.resetWhiteImage, 410, 700, 30, 30);
 
-    this.ctx.fill();
+    this.ctx.beginPath()
+
+    this.ctx.strokeRect(400, 690, 50, 50);
+    this.ctx.drawImage(
+      this.game.movesCount > 0
+        ? this.sprites.resetWhiteImage
+        : this.sprites.resetBlackImage,
+      410,
+      700,
+      30,
+      30
+    );
+
   }
 
   //handle go to main menu
@@ -85,6 +97,7 @@ class GameDetails {
       this.game.sounds.swipe.play();
 
       this.game.state = "READY";
+      this.game.sounds.bg.play();
       this.ctx.clearRect(0, 0, this.game.canvas.width, this.game.canvas.height);
     }
   }
@@ -120,13 +133,14 @@ class GameDetails {
       currentY >= reset.y &&
       currentY <= reset.y + 50
     ) {
-
-     this.resetLevel();
+      this.resetLevel();
     }
   }
 
-  resetLevel(){
-    this.game.sounds.swipe.play();
+  resetLevel() {
+    if (this.game.movesCount > 0) {
+      this.game.sounds.swipe.play();
+    }
 
     this.game.state = "PLAYING";
     this.game.movesCount = 0;
@@ -139,4 +153,3 @@ class GameDetails {
     }
   }
 }
-

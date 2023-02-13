@@ -68,6 +68,12 @@ class Level {
             goalBlock.x == this.game.levels[this.game.currentLevel][0].goalX &&
             goalBlock.y == this.game.levels[this.game.currentLevel][0].goalY
           ) {
+            if(goalBlock.x == 400){
+                goalBlock.x += 100;
+            }
+            else{
+                goalBlock.x -= 100
+            }
             this.game.sounds.levelComplete.play();
             let record = JSON.parse(window.localStorage.getItem("recordMoves"));
             if (
@@ -80,8 +86,8 @@ class Level {
                 JSON.stringify(record)
               );
             }
+             
             this.game.state = "COMPLETED";
-            // this.game.currentLevel++;
           }
         }
       });

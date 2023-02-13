@@ -28,6 +28,9 @@ pauseImage.src = "./assets/images/pause.png";
 const resetWhiteImage = new Image();
 resetWhiteImage.src = "./assets/images/resetwhite.png";
 
+const resetBlackImage = new Image();
+resetBlackImage.src = "./assets/images/resetblack.png";
+
 const unblockMeImage = new Image();
 unblockMeImage.src = "./assets/images/unblock.png";
 
@@ -63,6 +66,7 @@ let sprites = {
   baseImage: baseImage,
   pauseImage: pauseImage,
   resetWhiteImage: resetWhiteImage,
+  resetBlackImage:resetBlackImage,
   unblockMeImage: unblockMeImage,
   playButtonImage: playButtonImage,
   levelButton: levelButton,

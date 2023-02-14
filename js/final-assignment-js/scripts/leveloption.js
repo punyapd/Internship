@@ -73,7 +73,7 @@ class DisplayLevelList {
 
       this.ctx.fillStyle = "#8E4506";
 
-      this.ctx.roundRect(item.x, item.y, 100, 50, [20]);
+      this.ctx.fillRect(item.x, item.y, 100, 50);
       this.ctx.fill();
       this.displayLevelText(key, item.x, item.y);
     });

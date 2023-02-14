@@ -79,12 +79,12 @@ class LevelCompelte {
     this.ctx.beginPath();
 
     this.ctx.fillStyle = "#8E4506";
-    this.ctx.roundRect(
+    this.ctx.fillRect(
       this.nextLevelBtn.x,
       this.nextLevelBtn.y,
       this.nextLevelBtn.width,
       this.nextLevelBtn.height,
-      [30]
+      
     );
     this.ctx.fill();
     this.ctx.font = "30px verdana";
@@ -96,12 +96,12 @@ class LevelCompelte {
     this.ctx.beginPath();
 
     this.ctx.fillStyle = "#8E4506";
-    this.ctx.roundRect(
+    this.ctx.fillRect(
       this.homeBtn.x,
       this.homeBtn.y,
       this.homeBtn.width,
       this.homeBtn.height,
-      [30]
+      
     );
     this.ctx.fill();
     this.ctx.font = "30px Arial";
@@ -146,6 +146,7 @@ class LevelCompelte {
   //handle next level;
   setNextLevel(key) {
     this.game.state = "PLAYING";
+    this.game.sounds.levelComplete.pause();
     this.game.sounds.swipe.play();
 
     this.game.currentLevel++;

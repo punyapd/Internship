@@ -1,7 +1,7 @@
 //sounds
-let bgSound = document.getElementById("myBgSound");
-let levelCompleteSound = document.getElementById("levelSound");
-let swipeSound = document.getElementById("swipeSound");
+// let bgSound = document.getElementById("myBgSound");
+// let levelCompleteSound = document.getElementById("levelSound");
+// let swipeSound = document.getElementById("swipeSound");
 let canvas = document.querySelector("#block-escape");
 let ctx = canvas.getContext("2d");
 
@@ -42,6 +42,13 @@ levelButton.src = "./assets/images/levelButton.png";
 
 const homeImage = new Image();
 homeImage.src = "./assets/images/home.png";
+
+let bgSound  = new Audio(src = "./assets/sound/bg1.mp3");
+
+
+let levelCompleteSound = new Audio(src = "./assets/sound/levelcomplete.mp3")
+
+let swipeSound = new Audio(src = "./assets/sound/swipe.mp3");
 
 let sounds = {
   bg: bgSound,

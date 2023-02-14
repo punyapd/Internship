@@ -119,6 +119,8 @@ class Game {
   draw() {
     switch (this.state) {
       case GAME_STATE.READY:
+        // this.sounds.bg.play();
+
         this.startScreen.draw();
         break;
       case GAME_STATE.CHOOSElEVEL:

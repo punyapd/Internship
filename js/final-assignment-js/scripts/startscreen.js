@@ -45,12 +45,12 @@ class StartScreen {
     this.ctx.beginPath();
 
     this.ctx.fillStyle = "#8E4506";
-    this.ctx.roundRect(
+    this.ctx.fillRect(
       this.playBtn.x,
       this.playBtn.y,
       this.playBtn.width,
       this.playBtn.height,
-      [30]
+      
     );
     this.ctx.fill();
     this.ctx.font = "30px verdana";
@@ -62,12 +62,12 @@ class StartScreen {
     this.ctx.beginPath();
 
     this.ctx.fillStyle = "#8E4506";
-    this.ctx.roundRect(
+    this.ctx.fillRect(
       this.levelBtn.x,
       this.levelBtn.y,
       this.levelBtn.width,
       this.levelBtn.height,
-      [30]
+      
     );
     this.ctx.fill();
     this.ctx.font = "30px Arial";

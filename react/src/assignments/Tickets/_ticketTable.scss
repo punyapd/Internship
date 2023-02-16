@@ -1,0 +1,123 @@
+.ticket-list__table {
+  &__ticketdetails {
+    display: flex;
+    flex-direction: row;
+    gap: 2.4rem;
+
+    &__avatar {
+      height: 4.4rem;
+      width: 4.4rem;
+      border-radius: 50%;
+
+      img {
+        height: 100%;
+        width: 100%;
+        border-radius: 50%;
+        object-fit: cover;
+      }
+    }
+  }
+
+  &__ticketSubject {
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+
+    &__title {
+      font-weight: 600;
+      font-size: 1.4rem;
+      line-height: 2rem;
+
+      letter-spacing: 1.2;
+
+      color: #252733;
+    }
+
+    &__updateInfo {
+      font-weight: 400;
+      font-size: 1.2rem;
+      line-height: 1.6rem;
+      letter-spacing: 1.1;
+      color: #c5c7cd;
+    }
+  }
+
+  &__customerDetails {
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+
+    &__customerName {
+      font-weight: 600;
+      font-size: 1.4rem;
+      line-height: 2rem;
+
+      letter-spacing: 1.2;
+
+      color: #252733;
+    }
+
+    &__date {
+      font-weight: 400;
+      font-size: 1.2rem;
+      line-height: 1.6rem;
+      letter-spacing: 1.1;
+      color: #c5c7cd;
+    }
+  }
+
+  &__dateField {
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+    &__fulldate {
+      font-weight: 600;
+      font-size: 1.4rem;
+      line-height: 2rem;
+
+      letter-spacing: 1.2;
+
+      color: #252733;
+    }
+
+    &__time {
+      font-weight: 400;
+      font-size: 1.2rem;
+      line-height: 1.6rem;
+      letter-spacing: 1.1;
+      color: #c5c7cd;
+    }
+  }
+
+  //priority column
+
+  &__priority {
+    button {
+      padding: 0.5rem 1.2rem;
+      border-radius: 3rem;
+      text-transform: uppercase;
+      font-weight: 700;
+      font-size: 1.1rem;
+      line-height: 1.4rem;
+      color: #ffffff;
+      display: flex;
+      align-items: center;
+      text-align: center;
+      letter-spacing: 0.5px;
+      text-transform: uppercase;
+      border: none;
+      outline: none;
+    }
+
+    &--buttonGreen {
+      background: #29cc97;
+    }
+
+    &--buttonRed {
+      background: #f12b2c;
+    }
+    &--buttonYellow {
+      background: #fec400;
+    }
+  }
+}

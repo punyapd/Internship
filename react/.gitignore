@@ -12,6 +12,9 @@ dist
 dist-ssr
 *.local
 
+#include react dist
+!react/dist
+
 # Editor directories and files
 .vscode/*
 !.vscode/extensions.json

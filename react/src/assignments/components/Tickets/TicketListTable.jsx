@@ -1,4 +1,4 @@
-import React , {useEffect, useState} from "react";
+import React, { useEffect, useState } from "react";
 import TableRow from "./TableRow";
 
 const ticketsDataList = [
@@ -92,20 +92,15 @@ const ticketsDataList = [
   },
 ];
 
-const TicketListTable = ({searchKey}) => {
+const TicketListTable = ({ searchKey, filterKey }) => {
+  const [ticketsData, setTicketsData] = useState(ticketsDataList);
 
-    const[ticketsData , setTicketsData] = useState(ticketsDataList)
+  const deleteItem = (index) => {
+    let copy = [...ticketsData];
+    copy = copy.filter((item) => index != item);
+    setTicketsData(copy);
+  };
 
-    const deleteItem = (index) => {
-       let copy =  [...ticketsData];
-      copy =  copy.filter((item)=> index != item);
-        setTicketsData(copy)
-    }
-
-
-
-
-    
   return (
     <div className="ticket-list__table">
       <table>
@@ -120,8 +115,20 @@ const TicketListTable = ({searchKey}) => {
         </thead>
 
         <tbody>
-          {ticketsData.filter((ticket) => ticket.ticketSubject.includes(searchKey)).map((item, key) => (
-            <TableRow item={item} key={key}  index ={key} deleteItem = {deleteItem}/>
+          {(searchKey
+            ? ticketsData.filter((ticket) =>
+                ticket.ticketSubject.includes(searchKey)
+              )
+            : filterKey
+            ? ticketsData.filter((ticket) => ticket.priority == filterKey)
+            : ticketsData
+          ).map((item, key) => (
+            <TableRow
+              item={item}
+              key={key}
+              index={key}
+              deleteItem={deleteItem}
+            />
           ))}
         </tbody>
       </table>

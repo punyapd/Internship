@@ -1,7 +1,6 @@
 import React from "react";
 
 const Priority = ({ item }) => {
-    console.log("priotry", item.priority)
   return (
     <div className="ticket-list__table__priority">
       {item.priority == "HIGH" && (

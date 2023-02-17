@@ -1,12 +1,12 @@
 import React from 'react'
 import Sort from './Sort'
 import Filter from './Filter'
-const SortAndFilterMenu = () => {
+const SortAndFilterMenu = ({setFilterKey}) => {
   return (
     <div className='ticket-list__top__sortAndFilterMenu'>
         <Sort />
            
-        <Filter />
+        <Filter  setFilterKey = {setFilterKey} />
     </div>
   )
 }

@@ -18,24 +18,24 @@ $border-color: #dfe0eb;
       align-items: center;
       column-gap: 3.2rem;
 
-      i{
+      i {
         font-size: 16px;
       }
 
-      //searchbar 
-      &__searchbar{
-        input{
-            border: 1px solid $border-color;
-            &:focus{
-                outline: none;
-            }
+      //searchbar
+      &__searchbar {
+        input {
+          border: 1px solid $border-color;
+          &:focus {
+            outline: none;
+          }
         }
       }
       &__icons {
         display: flex;
         flex-direction: row;
         gap: 2.5rem;
-         cursor: pointer;
+        cursor: pointer;
         //notification
 
         &__notification {
@@ -108,8 +108,7 @@ $border-color: #dfe0eb;
             background: url("man.png");
             position: absolute;
             border-radius: 50%;
-      cursor: pointer;
-
+            cursor: pointer;
           }
         }
       }
@@ -146,6 +145,7 @@ $border-color: #dfe0eb;
         color: #252733;
       }
 
+      //sort and filter menu
       &__sortAndFilterMenu {
         display: flex;
         flex-direction: row;
@@ -176,8 +176,31 @@ $border-color: #dfe0eb;
           line-height: 2rem;
           letter-spacing: 1.2;
           font-weight: 600;
-          
+          cursor: pointer;
           color: #4b506d;
+          position: relative;
+        }
+
+        &__filterTab {
+          position: absolute;
+          background-color: #ffffff;
+          width: 20rem;
+          height: 20rem;
+          top: 2rem;
+          right: 0.5rem;
+          box-shadow: -2px 2px 12px 4px rgba(133, 124, 133, 1);
+          opacity: 1;
+          // border-radius: 1rem;
+
+          ul {
+            list-style-type: none;
+
+            li {
+              padding: 2rem;
+              color: #252733;
+              border-bottom: 1px solid $border-color;
+            }
+          }
         }
       }
     }
@@ -205,8 +228,8 @@ $border-color: #dfe0eb;
           text-align: left;
           padding-left: 3.2rem;
           padding: 2.4rem 0 2.4rem 3.2rem;
-          &:nth-child(1){
-            width:45%;
+          &:nth-child(1) {
+            width: 45%;
           }
         }
         tbody {

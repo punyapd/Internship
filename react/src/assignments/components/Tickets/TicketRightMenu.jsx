@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import NotificationTab from "./NotificationTab";
 import UserIcon from "./UserIcon";
-const TicketRightMenu = ({searchKey , onSearchChange}) => {
+const TicketRightMenu = ({searchKey , onSearchChange , }) => {
   const [showNotificationTab, setShowNotificationTab] = useState(false);
   const [showSearchBar, setShowSearchBar] = useState(false);
 
@@ -29,7 +29,7 @@ const TicketRightMenu = ({searchKey , onSearchChange}) => {
         <i className="icon-search" onClick={() => handleSearchBar()} />
 
         <div className="ticket-header__rightMenu__icons__notification">
-          <span class="ticket-header__rightMenu__icons__notification__count"></span>
+          <span className="ticket-header__rightMenu__icons__notification__count"></span>
           <i
             className="icon-notification"
             onClick={() => handleNotificaton()}

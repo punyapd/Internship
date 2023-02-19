@@ -1,0 +1,262 @@
+$lightBlue: #dde2ff;
+$border-color: #dfe0eb;
+.ticket {
+  width: 80%;
+  background-color: #f6f9fc;
+  padding: 3rem;
+  margin-left: 20%;
+
+  &-header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    &__rightMenu {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      column-gap: 3.2rem;
+
+
+      i {
+        font-size: 16px;
+      }
+
+      //searchbar
+      &__searchbar {
+        input {
+          border: 1px solid $border-color;
+          border-radius: 0.8rem;
+          padding:1.5rem;
+          &:focus {
+            outline: none;
+          }
+        }
+      }
+      &__icons {
+        display: flex;
+        flex-direction: row;
+        gap: 2.5rem;
+        cursor: pointer;
+        //notification
+
+        &__notification {
+          position: relative;
+          cursor: pointer;
+
+          &__popup {
+            width: 30rem;
+            height: 30rem;
+            position: absolute;
+            background-color: #fff;
+            top: 15px;
+            right: -5px;
+            border-radius: 1rem;
+            opacity: 1;
+            box-shadow: -2px 2px 12px 4px rgba(133, 124, 133, 1);
+            padding: 2rem;
+
+            ul {
+              list-style: none;
+              margin: 0;
+              padding: 0;
+
+              li {
+                margin-bottom: 10px;
+
+                a {
+                  color: #333;
+                  text-decoration: none;
+                }
+              }
+            }
+          }
+
+          &__count {
+            display: inline-block;
+            background-color: blue;
+            height: 0.6rem;
+            width: 0.6rem;
+            border-radius: 50%;
+            position: absolute;
+            top: -4px;
+            right: -5px;
+          }
+        }
+
+        img {
+          height: 1.6rem;
+          width: 1.6rem;
+        }
+      }
+
+      &__userdetails {
+        display: flex;
+        flex-direction: row;
+        gap: 1.4rem;
+        &__usericon {
+          height: 4.4rem;
+          width: 4.4rem;
+          border-radius: 50%;
+          border: 0.2rem solid $border-color;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+
+          &::after {
+            content: "";
+            height: 4rem;
+            width: 4rem;
+            background: url("/man.png");
+            position: absolute;
+            border-radius: 50%;
+            cursor: pointer;
+          }
+        }
+      }
+
+      &__divider {
+        height: 3.2rem;
+        width: 0.2rem;
+        background-color: #dfe0eb;
+      }
+    }
+  }
+
+  //ticket list css start
+  &-list {
+    background-color: #ffffff;
+    border-radius: 1rem;
+    margin-top: 5.4rem;
+    padding-top: 3.2rem;
+    border: 2px solid $border-color;
+
+    &__top {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+      margin-inline: 3.2rem;
+      margin-bottom: 4.8rem;
+
+      &__title {
+        font-weight: 700;
+        font-size: 1.9rem;
+        line-height: 2.4rem;
+        letter-spacing: 1.4;
+        color: #252733;
+      }
+
+      //sort and filter menu
+      &__sortAndFilterMenu {
+        display: flex;
+        flex-direction: row;
+        gap: 3.2rem;
+
+        img {
+          height: 1.6rem;
+          width: 1.6rem;
+        }
+
+        &__sort {
+          display: flex;
+          flex-direction: row;
+          gap: 0.8rem;
+          font-size: 1.4rem;
+          line-height: 2rem;
+          letter-spacing: 1.2;
+          font-weight: 600;
+
+          color: #4b506d;
+        }
+
+        &__filter {
+          display: flex;
+          flex-direction: row;
+          gap: 0.8rem;
+          font-size: 1.4rem;
+          line-height: 2rem;
+          letter-spacing: 1.2;
+          font-weight: 600;
+          cursor: pointer;
+          color: #4b506d;
+          position: relative;
+        }
+
+        &__filterTab {
+          position: absolute;
+          background-color: #ffffff;
+          width: 20rem;
+          top: 2rem;
+          right: 0.5rem;
+          box-shadow: -2px 2px 12px 4px rgba(133, 124, 133, 1);
+          opacity: 1;
+         
+
+
+
+          ul {
+            list-style-type: none;
+            color: #252733;
+            padding:0;
+
+
+            li {
+              text-align: center;
+              padding:1rem 1rem;
+              border-bottom: 1px solid $border-color;
+            }
+          }
+
+          &--activeItem{
+            color:orange;
+          }
+        }
+      }
+    }
+
+    &__table {
+      table {
+        border-collapse: collapse;
+        width: 100%;
+        display: table;
+
+        // table-layout: fixed;
+
+        th {
+          font-weight: 700;
+          font-size: 14px;
+          line-height: 18px;
+
+          letter-spacing: 1.2;
+
+          color: #9fa2b4;
+        }
+
+        th,
+        td {
+          text-align: left;
+          padding-left: 3.2rem;
+          padding: 2.4rem 0 2.4rem 3.2rem;
+          &:nth-child(1) {
+            width: 45%;
+          }
+        }
+        tbody {
+          tr {
+            border-top: 1px solid $border-color;
+            border-top: 1px solid $border-color;
+          }
+        }
+      }
+    }
+  }
+}
+
+.delete-button {
+  border: none;
+  outline: none;
+  background-color: transparent;
+  cursor: pointer;
+}

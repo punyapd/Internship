@@ -50,7 +50,7 @@ class GameDetails {
   displayLevell() {
     this.ctx.fillStyle = "white";
 
-    this.ctx.font = "30px verdana";
+    this.ctx.font = "24px verdana";
     this.ctx.fillText("Level:" + (this.game.currentLevel + 1), 10, 660);
   }
 

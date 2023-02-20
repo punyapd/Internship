@@ -1,14 +1,16 @@
-import React, { useState } from "react";
+import React, { useState, useContext } from "react";
+import { filterContext } from "../../../contexts/filterContext";
 
-const priorities = ["HIGH", "NORMAL", "LOW"];
+const priorities = ["HIGH", "NORMAL", "LOW", ""];
 
-const Filter = ({ setFilterKey }) => {
+const Filter = () => {
   const [showFilterPopup, setShowFilterPopup] = useState(false);
 
+  const { filterKey, setFilterKey } = useContext(filterContext);
   const handlePriorityClick = (priority) => {
-    setFilterKey(priority)
-    setShowFilterPopup(!showFilterPopup)
-  }
+    setFilterKey(priority);
+    setShowFilterPopup(!showFilterPopup);
+  };
 
   return (
     <div className="ticket-list__top__sortAndFilterMenu__filter">
@@ -21,8 +23,16 @@ const Filter = ({ setFilterKey }) => {
         <div className="ticket-list__top__sortAndFilterMenu__filterTab">
           <ul>
             {priorities.map((priority, key) => (
-              <li key={key} onClick={()=>handlePriorityClick(priority)}>
-                {priority}
+              <li
+                className={
+                  priority == filterKey
+                    ? `ticket-list__top__sortAndFilterMenu__filterTab--activeItem`
+                    : ""
+                }
+                key={key}
+                onClick={() => handlePriorityClick(priority)}
+              >
+                {priority ? priority : "ALL"}
               </li>
             ))}
           </ul>

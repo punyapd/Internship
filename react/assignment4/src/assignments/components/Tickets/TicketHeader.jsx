@@ -1,14 +1,14 @@
-import React  from 'react'
-import TicketRightMenu from './TicketRightMenu'
-const TicketHeader = ({searchKey , onSearchChange}) => {
-  
+import React from "react";
+import TicketRightMenu from "./TicketRightMenu";
+
+const TicketHeader = () => {
   return (
-    <div className='ticket-header'>
-        <h1 className='Bold-24'>Ticket</h1>
+    <div className="ticket-header">
+      <h1 className="Bold-24">Ticket</h1>
 
-         <TicketRightMenu  searchKey = {searchKey} onSearchChange = {onSearchChange}/>
+      <TicketRightMenu />
     </div>
-  )
-}
+  );
+};
 
-export default TicketHeader
+export default TicketHeader;

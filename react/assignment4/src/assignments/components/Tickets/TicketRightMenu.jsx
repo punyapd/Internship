@@ -1,9 +1,13 @@
-import React, { useState } from "react";
+import React, { useState  , useContext} from "react";
+import { searchContext } from "../../../contexts/searchContext";
 import NotificationTab from "./NotificationTab";
 import UserIcon from "./UserIcon";
-const TicketRightMenu = ({searchKey , onSearchChange , }) => {
+const TicketRightMenu = () => {
   const [showNotificationTab, setShowNotificationTab] = useState(false);
   const [showSearchBar, setShowSearchBar] = useState(false);
+
+
+  const {searchKey , onSearchChange} = useContext(searchContext);
 
 
   //handle notification tab

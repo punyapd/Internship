@@ -108,7 +108,7 @@ $border-color: #dfe0eb;
             content: "";
             height: 4rem;
             width: 4rem;
-            background: url("man.png");
+            background: url("/man.png");
             position: absolute;
             border-radius: 50%;
             cursor: pointer;
@@ -188,21 +188,29 @@ $border-color: #dfe0eb;
           position: absolute;
           background-color: #ffffff;
           width: 20rem;
-          height: 20rem;
           top: 2rem;
           right: 0.5rem;
           box-shadow: -2px 2px 12px 4px rgba(133, 124, 133, 1);
           opacity: 1;
-          // border-radius: 1rem;
+         
+
+
 
           ul {
             list-style-type: none;
+            color: #252733;
+            padding:0;
+
 
             li {
-              padding: 2rem;
-              color: #252733;
+              text-align: center;
+              padding:1rem 1rem;
               border-bottom: 1px solid $border-color;
             }
+          }
+
+          &--activeItem{
+            color:orange;
           }
         }
       }

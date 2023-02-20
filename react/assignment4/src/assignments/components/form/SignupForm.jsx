@@ -35,7 +35,7 @@ const SignupForm = ({activeForm}) => {
         />
         <CustomInputFields
           type="email"
-          label="Name"
+          label="Email"
           handleChange={handleChange}
           value={inputValues.email}
           name={"email"}

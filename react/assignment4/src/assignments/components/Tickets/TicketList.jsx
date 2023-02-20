@@ -1,13 +1,13 @@
-import React  from 'react'
-import TicketListTop from './TicketListTop'
-import TicketListTable from './TicketListTable'
-const TicketList = ({searchKey , filterKey , setFilterKey}) => {
+import React from "react";
+import TicketListTop from "./TicketListTop";
+import TicketListTable from "./TicketListTable";
+const TicketList = () => {
   return (
-    <div className='ticket-list'>
-         <TicketListTop setFilterKey={setFilterKey}/>
-         <TicketListTable searchKey={searchKey} filterKey = {filterKey} />
+    <div className="ticket-list">
+      <TicketListTop />
+      <TicketListTable />
     </div>
-  )
-}
+  );
+};
 
-export default TicketList
+export default TicketList;

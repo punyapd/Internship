@@ -24,7 +24,7 @@ const LoginForm = ({activeForm}) => {
       <form action="" onSubmit={(e)=>handleLoginSubmit(e)}>
         <CustomInputFields
           type="email"
-          label="Name"
+          label="Email"
           handleChange={handleChange}
           value={inputValues.email}
           name={"email"}

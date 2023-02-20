@@ -1,14 +1,14 @@
-import React from 'react'
-import Sort from './Sort'
-import Filter from './Filter'
-const SortAndFilterMenu = ({setFilterKey}) => {
+import React from "react";
+import Sort from "./Sort";
+import Filter from "./Filter";
+const SortAndFilterMenu = () => {
   return (
-    <div className='ticket-list__top__sortAndFilterMenu'>
-        <Sort />
-           
-        <Filter  setFilterKey = {setFilterKey} />
-    </div>
-  )
-}
+    <div className="ticket-list__top__sortAndFilterMenu">
+      <Sort />
 
-export default SortAndFilterMenu
+      <Filter />
+    </div>
+  );
+};
+
+export default SortAndFilterMenu;

@@ -1,4 +1,6 @@
-import React, { useEffect, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
+import { filterContext } from "../../../contexts/filterContext";
+import { searchContext } from "../../../contexts/searchContext";
 import TableRow from "./TableRow";
 
 const ticketsDataList = [
@@ -92,8 +94,13 @@ const ticketsDataList = [
   },
 ];
 
-const TicketListTable = ({ searchKey, filterKey }) => {
+const TicketListTable = () => {
   const [ticketsData, setTicketsData] = useState(ticketsDataList);
+  const {searchKey , setSearchKey} = useContext(searchContext);
+
+  const{filterKey , setFilterKey} = useContext(filterContext);
+  // console.log("search:" , search)
+  console.log('searchkey:' , searchKey)
 
   const deleteItem = (index) => {
     let copy = [...ticketsData];

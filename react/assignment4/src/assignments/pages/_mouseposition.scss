@@ -1,0 +1,34 @@
+.square{
+    height: 2rem;
+    width:2rem;
+    background-color: magenta;
+}
+
+.circle{
+    height:2rem;
+    width:2rem;
+    border-radius: 50%;
+    background-color: orange;
+
+}
+
+.rectangle{
+    height: 2rem;
+    width:3rem;
+    background-color: greenyellow;
+}
+
+.traingle{
+    width: 0; 
+    height: 0; 
+    border-top: 10px solid transparent;
+    border-bottom: 10px solid transparent; 
+    
+    border-right:10px solid blue; 
+}
+
+.box-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

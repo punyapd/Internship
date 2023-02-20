@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Routes, Route } from "react-router-dom";
+import { Routes, Route, BrowserRouter } from "react-router-dom";
 import { searchContext } from "./contexts/searchContext";
 import { filterContext } from "./contexts/filterContext";
 import Login from "./assignments/pages/Login";
@@ -14,6 +14,8 @@ import "./assignments/components/Tickets/_ticketTable.scss";
 import "./assignments/components/modals/_modal.scss";
 import "./form.scss";
 import "./assignments/components/reusable/_button.scss";
+import "./assignments/pages/_mouseposition.scss";
+
 import Dashboard from "./assignments/components/dashboard/Dashboard";
 import MousePosition from "./assignments/pages/MousePosition";
 function App() {
@@ -30,13 +32,14 @@ function App() {
       <searchContext.Provider
         value={{ searchKey, onSearchChange: handleSearchChange }}
       >
-        <filterContext.Provider value = {{filterKey , setFilterKey}}>
-          <Routes>
-            <Route path="/" element={<Dashboard />} />
-            <Route path="/login" element={<Login />} />
-            <Route path="/mouse" element={<MousePosition />} />
-
-          </Routes>
+        <filterContext.Provider value={{ filterKey, setFilterKey }}>
+          <BrowserRouter>
+            <Routes>
+              <Route path="/" element={<Dashboard />} />
+              <Route path="/login" element={<Login />} />
+              <Route path="/mouse" element={<MousePosition />} />
+            </Routes>
+          </BrowserRouter>
         </filterContext.Provider>
       </searchContext.Provider>
     </>

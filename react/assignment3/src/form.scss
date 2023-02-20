@@ -6,6 +6,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  
 }
 
 
@@ -18,9 +19,9 @@ label{
 .form-component {
   background-color: #fff;
   width: 38rem;
-  min-height: 58rem;
+  // min-height: 58rem;
   border-radius: 2rem;
-  padding: 4rem 3.2rem 0 3.2rem;
+  padding: 4rem 3.2rem 4rem 3.2rem;
 
   &-top {
     text-align: center;

@@ -1,17 +1,6 @@
 {
   "tickets": [
     {
-      "name": "hari ram",
-      "ticketName": "Contact Email not sent",
-      "customerDate": "02/23/2023",
-      "updateDaysCount": "1",
-      "date": "February 23, 2023",
-      "time": "4:52 PM",
-      "priority": "high",
-      "avatarSource": "man.png",
-      "id": 783
-    },
-    {
       "name": "punya prasad dahal",
       "ticketName": "this is a ticket name",
       "customerDate": "02/23/2023",
@@ -21,6 +10,17 @@
       "priority": "normal",
       "avatarSource": "customer-3.png",
       "id": 483
+    },
+    {
+      "name": "LIonel Messi",
+      "ticketName": "Contact Email not sent",
+      "customerDate": "02/24/2023",
+      "date": "February 24, 2023",
+      "time": "7:29 AM",
+      "updateDaysCount": "7 hours ago",
+      "priority": "high",
+      "avatarSource": "customer-3.png",
+      "id": 44
     }
   ],
   "users": [

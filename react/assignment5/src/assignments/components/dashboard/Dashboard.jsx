@@ -7,7 +7,7 @@ const Dashboard = () => {
   const navigate = useNavigate();
   useEffect(() => {
     console.log("i", JSON.stringify(localStorage.getItem("loggedState")));
-    if (localStorage.getItem("loggedState") === "false") {
+    if (!localStorage.getItem("loggedState")) {
       navigate("/login");
       console.log("i am here");
     }

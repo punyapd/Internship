@@ -1,0 +1,462 @@
+{
+  "tickets": [
+    {
+      "name": "hari ram",
+      "ticketName": "Contact Email not sent",
+      "customerDate": "02/23/2023",
+      "updateDaysCount": "1",
+      "date": "February 23, 2023",
+      "time": "4:52 PM",
+      "priority": "high",
+      "avatarSource": "man.png",
+      "id": 783
+    },
+    {
+      "name": "punya prasad dahal",
+      "ticketName": "this is a ticket name",
+      "customerDate": "02/23/2023",
+      "date": "February 23, 2023",
+      "time": "9:05 PM",
+      "updateDaysCount": "21 hours ago",
+      "priority": "normal",
+      "avatarSource": "customer-3.png",
+      "id": 483
+    }
+  ],
+  "users": [
+    {
+      "fullName": "punya dahal",
+      "email": "dahalpp55@gmail.com",
+      "password": "pass123",
+      "confirmPassword": "pass123",
+      "id": 1
+    },
+    {
+      "fullName": "punya dahal",
+      "email": "dahalpp55@gmail.com",
+      "password": "pass123",
+      "confirmPassword": "pass123",
+      "id": 2
+    },
+    {
+      "fullName": "punya dahal",
+      "email": "dahalpp55@gmail.com",
+      "password": "pass123",
+      "confirmPassword": "pass123",
+      "id": 3
+    },
+    {
+      "fullName": "hari",
+      "email": "hari@gmail.com",
+      "password": "hari",
+      "confirmPassword": "hari",
+      "id": 4
+    },
+    {
+      "fullName": "sabudh",
+      "email": "sab@gmail.com",
+      "password": "sab123",
+      "confirmPassword": "sab123",
+      "id": 5
+    },
+    {
+      "fullName": "sabudh",
+      "email": "sab@gmail.com",
+      "password": "sab123",
+      "confirmPassword": "sab123",
+      "id": 6
+    },
+    {
+      "fullName": "messi",
+      "email": "m@gmail.com",
+      "password": "messi123",
+      "confirmPassword": "messi",
+      "id": 7
+    },
+    {
+      "fullName": "messi",
+      "email": "m@gmail.com",
+      "password": "messi123",
+      "confirmPassword": "messi",
+      "id": 8
+    },
+    {
+      "fullName": "kevin",
+      "email": "k@gmail.com",
+      "password": "k123",
+      "confirmPassword": "k123",
+      "id": 9
+    },
+    {
+      "fullName": "kevin",
+      "email": "k@gmail.com",
+      "password": "k123",
+      "confirmPassword": "k123",
+      "id": 10
+    },
+    {
+      "fullName": "name",
+      "email": "n@gmail.com",
+      "password": "name123",
+      "confirmPassword": "name123",
+      "id": 11
+    },
+    {
+      "fullName": "name",
+      "email": "n@gmail.com",
+      "password": "name123",
+      "confirmPassword": "name123",
+      "id": 12
+    },
+    {
+      "fullName": "name1",
+      "email": "n@gmail.com",
+      "password": "pas",
+      "confirmPassword": "pas",
+      "id": 13
+    },
+    {
+      "fullName": "hari",
+      "email": "hari@gmail.com",
+      "password": "hari",
+      "confirmPassword": "hari",
+      "id": 14
+    },
+    {
+      "fullName": "hari",
+      "email": "hari@gmail.com",
+      "password": "hari",
+      "confirmPassword": "hari",
+      "id": 15
+    },
+    {
+      "fullName": "enter",
+      "email": "clickme@gmail.com",
+      "password": "pass",
+      "confirmPassword": "pass",
+      "id": 16
+    },
+    {
+      "fullName": "hello",
+      "email": "hello@gmail.com",
+      "password": "hello",
+      "confirmPassword": "hello",
+      "id": 17
+    },
+    {
+      "fullName": "hello",
+      "email": "hello@gmail.com",
+      "password": "hello",
+      "confirmPassword": "hello",
+      "id": 18
+    },
+    {
+      "fullName": "hello",
+      "email": "hello@gmail.com",
+      "password": "hello",
+      "confirmPassword": "hello",
+      "id": 19
+    },
+    {
+      "fullName": "hello",
+      "email": "hello@gmail.com",
+      "password": "hello",
+      "confirmPassword": "hello",
+      "id": 20
+    },
+    {
+      "fullName": "dfdjf",
+      "email": "dfdsfsdf@gmial.com",
+      "password": "ggggggg",
+      "confirmPassword": "gggggg",
+      "id": 21
+    },
+    {
+      "fullName": "fkjsdfjdjf",
+      "email": "aa@gmail.com",
+      "password": "aaaaa",
+      "confirmPassword": "aaaaa",
+      "id": 22
+    },
+    {
+      "fullName": "bhai",
+      "email": "meronhai@gmail.com",
+      "password": "mero",
+      "confirmPassword": "mero",
+      "id": 23
+    },
+    {
+      "fullName": "bhai",
+      "email": "meronhai@gmail.com",
+      "password": "mero",
+      "confirmPassword": "mero",
+      "id": 24
+    },
+    {
+      "fullName": "bhai",
+      "email": "meronhai@gmail.com",
+      "password": "mero",
+      "confirmPassword": "mero",
+      "id": 25
+    },
+    {
+      "fullName": "bhai",
+      "email": "meronhai@gmail.com",
+      "password": "mero",
+      "confirmPassword": "mero",
+      "id": 26
+    },
+    {
+      "fullName": "bhai",
+      "email": "meronhai@gmail.com",
+      "password": "mero",
+      "confirmPassword": "mero",
+      "id": 27
+    },
+    {
+      "fullName": "bhai",
+      "email": "meronhai@gmail.com",
+      "password": "mero",
+      "confirmPassword": "mero",
+      "id": 28
+    },
+    {
+      "fullName": "bhai",
+      "email": "meronhai@gmail.com",
+      "password": "mero",
+      "confirmPassword": "mero",
+      "id": 29
+    },
+    {
+      "fullName": "bhai",
+      "email": "meronhai@gmail.com",
+      "password": "mero",
+      "confirmPassword": "mero",
+      "id": 30
+    },
+    {
+      "fullName": "bhai",
+      "email": "meronhai@gmail.com",
+      "password": "mero",
+      "confirmPassword": "mero",
+      "id": 31
+    },
+    {
+      "fullName": "bhai",
+      "email": "meronhai@gmail.com",
+      "password": "mero",
+      "confirmPassword": "mero",
+      "id": 32
+    },
+    {
+      "fullName": "bhai",
+      "email": "meronhai@gmail.com",
+      "password": "mero",
+      "confirmPassword": "mero",
+      "id": 33
+    },
+    {
+      "fullName": "",
+      "email": "",
+      "password": "",
+      "confirmPassword": "",
+      "id": 34
+    },
+    {
+      "fullName": "",
+      "email": "",
+      "password": "",
+      "confirmPassword": "",
+      "id": 35
+    },
+    {
+      "fullName": "",
+      "email": "",
+      "password": "",
+      "confirmPassword": "",
+      "id": 36
+    },
+    {
+      "fullName": "ddddd",
+      "email": "admin@admin.com",
+      "password": "dddddd",
+      "confirmPassword": "dddddd",
+      "id": 37
+    },
+    {
+      "fullName": "ddddd",
+      "email": "admin@admin.com",
+      "password": "dddddd",
+      "confirmPassword": "dddddd",
+      "id": 38
+    },
+    {
+      "fullName": "ddddd",
+      "email": "admin@admin.com",
+      "password": "dddddd",
+      "confirmPassword": "dddddd",
+      "id": 39
+    },
+    {
+      "fullName": "ddddd",
+      "email": "admin@admin.com",
+      "password": "dddddd",
+      "confirmPassword": "dddddd",
+      "id": 40
+    },
+    {
+      "fullName": "ddddd",
+      "email": "admin@admin.com",
+      "password": "dddddd",
+      "confirmPassword": "dddddd",
+      "id": 41
+    },
+    {
+      "fullName": "ddddd",
+      "email": "admin@admin.com",
+      "password": "dddddd",
+      "confirmPassword": "dddddd",
+      "id": 42
+    },
+    {
+      "fullName": "oye",
+      "email": "dibtech@gmail.com",
+      "password": "ffffff",
+      "confirmPassword": "ffffff",
+      "id": 43
+    },
+    {
+      "fullName": "oye",
+      "email": "dibtech@gmail.com",
+      "password": "ffffff",
+      "confirmPassword": "ffffff",
+      "id": 44
+    },
+    {
+      "fullName": "oye",
+      "email": "dibtech@gmail.com",
+      "password": "ffffff",
+      "confirmPassword": "ffffff",
+      "id": 45
+    },
+    {
+      "fullName": "",
+      "email": "",
+      "password": "",
+      "confirmPassword": "",
+      "id": 46
+    },
+    {
+      "fullName": "",
+      "email": "",
+      "password": "",
+      "confirmPassword": "",
+      "id": 47
+    },
+    {
+      "fullName": "",
+      "email": "",
+      "password": "",
+      "confirmPassword": "",
+      "id": 48
+    },
+    {
+      "fullName": "fffffg",
+      "email": "admin@admin.com",
+      "password": "fffff",
+      "confirmPassword": "fffff",
+      "id": 49
+    },
+    {
+      "fullName": "dddddd",
+      "email": "dddd@gmail.com",
+      "password": "dddd",
+      "confirmPassword": "dddd",
+      "id": 50
+    },
+    {
+      "fullName": "ddd",
+      "email": "dddd@gmail.com",
+      "password": "dddd",
+      "confirmPassword": "dddd",
+      "id": 51
+    },
+    {
+      "fullName": "ddd",
+      "email": "dddd@gmail.com",
+      "password": "dddd",
+      "confirmPassword": "dddd",
+      "id": 52
+    },
+    {
+      "fullName": "fdsdfsdfsad",
+      "email": "dfdfjkdfjdf@gmail.com",
+      "password": "dddddd",
+      "confirmPassword": "ddddddddddd",
+      "id": 53
+    },
+    {
+      "fullName": "lionel messi",
+      "email": "lm@gmail.com",
+      "password": "leo",
+      "confirmPassword": "leo",
+      "id": 54
+    },
+    {
+      "fullName": "lionel messi",
+      "email": "lm@gmail.com",
+      "password": "leo",
+      "confirmPassword": "leo",
+      "id": 55
+    },
+    {
+      "fullName": "lionel messi",
+      "email": "lm@gmail.com",
+      "password": "leo",
+      "confirmPassword": "leo",
+      "id": 56
+    },
+    {
+      "fullName": "ram hari",
+      "email": "a@gmail.com",
+      "password": "ramhari",
+      "confirmPassword": "ramhari",
+      "id": 57
+    },
+    {
+      "fullName": "will smit",
+      "email": "w@gmail.com",
+      "password": "will",
+      "confirmPassword": "will",
+      "id": 58
+    },
+    {
+      "fullName": "punya dahal",
+      "email": "dahalpp55@gmail.com",
+      "password": "o",
+      "confirmPassword": "p",
+      "id": 59
+    },
+    {
+      "fullName": "punya dahal",
+      "email": "admin@admin.com",
+      "password": "dd",
+      "confirmPassword": "dd",
+      "id": 60
+    },
+    {
+      "fullName": "punya dahal",
+      "email": "admin@admin.com",
+      "password": "d",
+      "confirmPassword": "d",
+      "id": 61
+    },
+    {
+      "fullName": "punya dahal",
+      "email": "admin@admin.com",
+      "password": "dd",
+      "confirmPassword": "dd",
+      "id": 62
+    }
+  ]
+}

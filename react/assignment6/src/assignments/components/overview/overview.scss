@@ -1,0 +1,62 @@
+$border-color: #dfe0eb;
+$main-blue: #3751ff;
+.overview {
+  margin-top: 5.4rem;
+  padding-top: 3.2rem;
+
+  &-itemContainer {
+    display: flex;
+    flex-direction: row;
+    gap: 3rem;
+  }
+  &-item {
+    padding: 2.4rem 3.2rem;
+    border: 1px solid $border-color;
+    background-color: white;
+    border-radius: 0.8rem;
+    flex-basis: 20%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.3s;
+
+    &:hover {
+      border: 1px solid $main-blue;
+      color: $main-blue;
+
+      span,
+      h4 {
+        color: $main-blue;
+      }
+    }
+    &-content {
+      display: flex;
+      flex-direction: column;
+      gap: 1.2rem;
+
+      h4 {
+        font-weight: 700;
+        font-size: 1.9rem;
+        line-height: 2.4rem;
+
+        text-align: center;
+        letter-spacing: 0.4rem;
+        margin: 0;
+
+        color: #9fa2b4;
+        transition: all 0.3s;
+      }
+
+      span {
+        font-weight: 700;
+        font-size: 4rem;
+        line-height: 5rem;
+        text-align: center;
+        letter-spacing: 1px;
+        transition: all 0.3s;
+
+        color: #252733;
+      }
+    }
+  }
+}

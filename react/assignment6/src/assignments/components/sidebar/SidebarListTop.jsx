@@ -3,15 +3,11 @@ import SidebarListItem from "./SidebarListItem";
 
 const SidebarListTop = ({ items }) => {
   return (
-    <div>
-      {items.map((item, key) => (
-        <SidebarListItem
-          imagesource={item.imageSource}
-          text={item.text}
-          key={key}
-        />
+    <nav>
+      {items.map((item) => (
+        <SidebarListItem item={item}/>
       ))}
-    </div>
+    </nav>
   );
 };
 

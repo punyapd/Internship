@@ -5,7 +5,9 @@ const TicketHeader = () => {
   const location = useLocation();
   return (
     <div className="ticket-header">
-      <h1 className="Bold-24">{location.pathname.slice(1)}</h1>
+      <h1 className="Bold-24">
+        {location.pathname == "" ? "overview" : location.pathname.slice(1)}
+      </h1>
 
       <TicketRightMenu />
     </div>

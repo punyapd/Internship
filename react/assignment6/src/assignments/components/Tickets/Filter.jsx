@@ -32,7 +32,7 @@ const Filter = () => {
                 key={key}
                 onClick={() => handlePriorityClick(priority)}
               >
-                {priority ? priority.toUpperCase() : "ALL"}
+                {priority ? priority.toLocaleUpperCase() : "ALL"}
               </li>
             ))}
           </ul>

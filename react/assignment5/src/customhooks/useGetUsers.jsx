@@ -8,10 +8,17 @@ const useGetUsers = () => {
     const getUsers = async () => {
       setIsLoading(true);
 
-      const response = await fetch(`http://localhost:3000/users`);
+      const response = await fetch(
+        `https://react-js-assignment-default-rtdb.firebaseio.com/users.json`
+      );
 
       const data = await response.json();
-      setUsers(data);
+      const usersArray = Object.entries(data).map(([key, value]) => ({
+        id: key,
+        ...value,
+      }));
+      setUsers(usersArray);
+      // setUsers(Object.keys(data));
 
       setIsLoading(false);
     };

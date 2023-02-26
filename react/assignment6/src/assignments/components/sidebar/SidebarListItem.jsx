@@ -1,12 +1,18 @@
 import React from "react";
+import { NavLink } from "react-router-dom";
+const SidebarListItem = ({ item }) => {
+  console.log("item:", item);
 
-const SidebarListItem = ({ imagesource, text }) => {
   return (
-    <div className="sidebar-list__Item">
-      {/* <img src = {imagesource} alt = "icon"/> */}
-      <i className={`icon-${imagesource}`}></i>
-      <h2 className="Regular">{text}</h2>
-    </div>
+    <NavLink
+      to={item.path}
+      className={({ isActive }) =>
+        isActive ? "sidebar-list__Item--active " : "sidebar-list__Item"
+      }
+    >
+      <i className={`icon-${item.imageSource}`}></i>
+      <h2 className="Regular">{item.text}</h2>
+    </NavLink>
   );
 };
 

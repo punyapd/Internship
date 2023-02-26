@@ -251,6 +251,7 @@ $border-color: #dfe0eb;
           tr {
             border-top: 1px solid $border-color;
             border-top: 1px solid $border-color;
+            cursor: pointer;
           }
         }
       }
@@ -263,4 +264,10 @@ $border-color: #dfe0eb;
   outline: none;
   background-color: transparent;
   cursor: pointer;
+}
+
+//ticket deatils page
+
+.ticket-details-single {
+  margin: auto;
 }

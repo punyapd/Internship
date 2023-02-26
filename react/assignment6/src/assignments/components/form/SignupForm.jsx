@@ -45,6 +45,7 @@ const SignupForm = ({ activeForm }) => {
           name={"fullName"}
           placeholder={"Enter Full Name"}
           className="form__input"
+          required={true}
         />
         <CustomInputFields
           type="email"
@@ -54,6 +55,7 @@ const SignupForm = ({ activeForm }) => {
           name={"email"}
           placeholder={"Enter Email"}
           className="form__input"
+          required={true}
         />
 
         <PasswordField
@@ -64,6 +66,7 @@ const SignupForm = ({ activeForm }) => {
           name={"password"}
           placeholder={"Enter Password"}
           className="form__input"
+          required={true}
         />
 
         <PasswordField
@@ -74,6 +77,7 @@ const SignupForm = ({ activeForm }) => {
           name={"confirmPassword"}
           placeholder={"Enter Password Again"}
           className="form__input"
+          required={true}
         />
 
         <Button activeForm={activeForm} />

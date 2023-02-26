@@ -1,0 +1,18 @@
+.ticket-details-info {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #dde2ff;
+  min-height: 100vh;
+}
+
+.ticket-details-info-container {
+  background-color: white;
+  box-shadow: -2px 2px 12px 4px rgba(133, 124, 133, 1);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  padding: 3rem;
+  border-radius: 2rem;
+}

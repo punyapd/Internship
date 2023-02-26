@@ -15,7 +15,7 @@ const LoginForm = ({ activeForm }) => {
   });
 
   const { users, isLoading } = useGetUsers();
-
+  console.log("users:", users);
   function handleChange(event) {
     const { name, value } = event.target;
     setInputValue({ ...inputValues, [name]: value });

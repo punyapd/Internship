@@ -1,15 +1,24 @@
-import React from 'react'
-import Sidebar from '../sidebar/Sidebar'
-import Ticket from '../Tickets/Ticket'
+import React, { useEffect } from "react";
+import { useNavigate } from "react-router-dom";
+import Sidebar from "../sidebar/Sidebar";
+import Ticket from "../Tickets/Ticket";
 
 const Dashboard = () => {
-  return (
-    <div className='dashboard'>
-         <Sidebar />
-         
-         <Ticket/>
-    </div>
-  )
-}
+  const navigate = useNavigate();
 
-export default Dashboard
+  useEffect(() => {
+    if (!localStorage.getItem("loggedState")) {
+      navigate("/login");
+    }
+  }, []);
+
+  return (
+    <div className="dashboard">
+      <Sidebar />
+
+      <Ticket />
+    </div>
+  );
+};
+
+export default Dashboard;

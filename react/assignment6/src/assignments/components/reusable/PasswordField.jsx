@@ -24,6 +24,7 @@ const PasswordField = (props) => {
         onChange={props.handleChange}
         className="form_input"
         placeholder={props.placeholder}
+        required={props.required}
       />
       <div className="password-field__icon">
         <span onClick={handleEyeIconClick}>

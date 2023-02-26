@@ -24,12 +24,17 @@ const SignupForm = ({ activeForm }) => {
   };
   function handleSubmit(e) {
     e.preventDefault();
-    axios.post("http://localhost:3000/users", signupData).then((response) => {
-      if (response.status == "201") {
-        navigate("/login");
-        notify("user added successfully");
-      }
-    });
+    axios
+      .post(
+        "https://react-js-assignment-default-rtdb.firebaseio.com/users.json",
+        signupData
+      )
+      .then((response) => {
+        if (response.status == "200") {
+          navigate("/login");
+          notify("user added successfully");
+        }
+      });
   }
 
   // console.log("R:", response);

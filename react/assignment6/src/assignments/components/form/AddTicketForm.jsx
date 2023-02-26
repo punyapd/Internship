@@ -1,14 +1,20 @@
 import React, { useState } from "react";
 import { toast } from "react-toastify";
 import CustomInputFields from "../reusable/CustomInputFiels";
+import dayjs from "dayjs";
+import localizedFormat from "dayjs/plugin/localizedFormat";
+import relativeTime from "dayjs/plugin/relativeTime";
+dayjs.extend(localizedFormat);
+dayjs.extend(relativeTime);
+let currentTime = dayjs().format("L");
 const AddTicketForm = ({ postTickets }) => {
   const [addTicketData, setAddTicketData] = useState({
     name: "",
     ticketName: "",
-    customerDate: "",
-    updateDaysCount: "",
-    date: "",
-    time: "",
+    customerDate: dayjs().format("L"),
+    date: dayjs().format("LL"),
+    time: dayjs().format("LT"),
+    updateDaysCount: dayjs(currentTime).fromNow(),
     priority: "",
     avatarSource: "",
     id: Math.floor(Math.random() * 1000),
@@ -44,6 +50,7 @@ const AddTicketForm = ({ postTickets }) => {
           name={"name"}
           placeholder={"Enter Full Name"}
           className="form__input"
+          required={true}
         />
         <CustomInputFields
           type="text"
@@ -53,8 +60,9 @@ const AddTicketForm = ({ postTickets }) => {
           name={"ticketName"}
           placeholder={"Enter Ticket Name"}
           className="form__input"
+          required={true}
         />
-        <CustomInputFields
+        {/* <CustomInputFields
           type="number"
           label="Days Count"
           handleChange={handleChange}
@@ -62,44 +70,17 @@ const AddTicketForm = ({ postTickets }) => {
           name={"updateDaysCount"}
           placeholder={"Enter number of days"}
           className="form__input"
-        />
-        <CustomInputFields
-          type="date"
-          label="customerDate"
-          handleChange={handleChange}
-          value={addTicketData.customerDate}
-          name={"customerDate"}
-          placeholder={"Enter customer date"}
-          className="form__input"
-        />
-        <CustomInputFields
-          type="date"
-          label="date"
-          handleChange={handleChange}
-          value={addTicketData.date}
-          name={"date"}
-          placeholder={"Enter Full date"}
-          className="form__input"
-        />
-
-        <CustomInputFields
-          type="time"
-          label="time"
-          handleChange={handleChange}
-          value={addTicketData.time}
-          name={"time"}
-          placeholder={"Enter Full time"}
-          className="form__input"
-        />
+        /> */}
 
         <CustomInputFields
           type="text"
           label="priority"
           handleChange={handleChange}
-          value={addTicketData.priority.toUpperCase()}
+          value={addTicketData.priority}
           name={"priority"}
           placeholder={"Enter priority"}
           className="form__input"
+          required={true}
         />
 
         <CustomInputFields
@@ -110,6 +91,7 @@ const AddTicketForm = ({ postTickets }) => {
           name={"avatarSource"}
           placeholder={"choose Avatar"}
           className="form__input"
+          required={true}
         />
 
         <div className="button">

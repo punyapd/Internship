@@ -7,11 +7,20 @@ const useTickets = () => {
   const GetTickets = async () => {
     setIsLoading(true);
 
-    await axios.get(`http://localhost:3000/tickets`).then((response) => {
-      setTickets(response.data);
-      setIsLoading(false);
-      console.log("res:", response);
-    });
+    await axios
+      .get(
+        `https://react-js-assignment-default-rtdb.firebaseio.com/tickets.json`
+      )
+      .then((response) => {
+        const ticketsArray = Object.entries(response.data).map(
+          ([key, value]) => ({
+            id: key,
+            ...value,
+          })
+        );
+        setTickets(ticketsArray);
+        setIsLoading(false);
+      });
   };
 
   //post tickets
@@ -20,7 +29,10 @@ const useTickets = () => {
     setIsLoading(true);
 
     await axios
-      .post("http://localhost:3000/tickets/", data)
+      .post(
+        "https://react-js-assignment-default-rtdb.firebaseio.com/tickets.json",
+        data
+      )
       .then((response) => {
         setTickets([data, ...tickets]);
         setIsLoading(false);
@@ -33,9 +45,11 @@ const useTickets = () => {
     console.log("id:", id);
 
     await axios
-      .delete(`http://localhost:3000/tickets/${id}`)
+      .delete(
+        `https://react-js-assignment-default-rtdb.firebaseio.com/tickets.json/${id}"`
+      )
       .then((response) => {
-        setTickets(tickets.filter((ticket) => ticket.id === id));
+        setTickets(tickets.filter((ticket) => ticket.id !== id));
         setIsLoading(false);
       });
   };

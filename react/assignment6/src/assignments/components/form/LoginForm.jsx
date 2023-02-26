@@ -32,11 +32,13 @@ const LoginForm = ({ activeForm }) => {
         user.email === inputValues.email &&
         user.password === inputValues.password
     );
-    console.log("find:", find);
 
     if (find) {
+      localStorage.setItem("loggedState", true);
       navigate("/");
       notify("Login Successfull!!");
+    } else {
+      toast.error("Credentials didnot match!!");
     }
   }
 
@@ -52,6 +54,7 @@ const LoginForm = ({ activeForm }) => {
           placeholder={"Enter Email"}
           className="form__input"
           activeForm={activeForm}
+          required={true}
         />
 
         <PasswordField
@@ -63,6 +66,7 @@ const LoginForm = ({ activeForm }) => {
           placeholder={"Enter Password"}
           className="form__input"
           activeForm={activeForm}
+          required={true}
         />
 
         <div className="remember-me">

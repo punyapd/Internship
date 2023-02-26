@@ -22,18 +22,14 @@ const TicketListTable = ({ tickets, deleteTicketItem }) => {
         </thead>
 
         <tbody>
-          {searchKey
+          {(filterKey
+            ? tickets.filter((ticket) => ticket.priority === filterKey)
+            : searchKey
             ? tickets.filter((ticket) => ticket.ticketName.includes(searchKey))
-            : filterKey
-            ? tickets.filter((ticket) => ticket.priority == filterKey)
-            : tickets.map((item, key) => (
-                <TableRow
-                  item={item}
-                  key={key}
-                  index={key}
-                  deleteItem={deleteTicketItem}
-                />
-              ))}
+            : tickets
+          ).map((item, key) => (
+            <TableRow item={item} key={key} deleteItem={deleteTicketItem} />
+          ))}
         </tbody>
       </table>
     </div>

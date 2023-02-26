@@ -1,60 +1,82 @@
+$text-color: #a4a6b3;
 
-$text-color:#A4A6B3;
-
+NavLink {
+  a {
+    text-decoration: none;
+  }
+}
 .sidebar {
-     background-color: #363740;
-     width:20%;
-     min-height: 100vh;
-     position: fixed;
-  &-header{
+  background-color: #363740;
+  width: 20%;
+  min-height: 100vh;
+  position: fixed;
+  &-header {
     display: flex;
     flex-direction: row;
     margin-top: 3.2rem;
-    padding:0 3rem;
+    padding: 0 3rem;
     gap: 1.2rem;
     &__logo {
       height: 32px;
       width: 32px;
     }
-    
-    &__title{
-        color:$text-color;
-        font-size:12px;
-        margin-top: 5px;
-        line-height: 2.35rem;
-        letter-spacing: 1.4;
 
+    &__title {
+      color: $text-color;
+      font-size: 12px;
+      margin-top: 5px;
+      line-height: 2.35rem;
+      letter-spacing: 1.4;
     }
+  }
 
-}
+  &-list {
+    margin-top: 6rem;
 
-&-list{
-    margin-top:6rem;
-    
-    img{
-        height: 16px;
-        width: 16px;
+    img {
+      height: 16px;
+      width: 16px;
     }
-    &__Item{
+    &__Item {
+      display: flex;
+      flex-direction: row;
+      column-gap: 2.4rem;
+      padding: 2rem 3rem;
+      text-transform: capitalize;
+      text-decoration: none;
+
+      &--active {
         display: flex;
         flex-direction: row;
-        column-gap:2.4rem;
-        padding:2rem 3rem;
+        column-gap: 2.4rem;
+        padding: 2rem 3rem;
         text-transform: capitalize;
+        text-decoration: none;
+        border-left: 2px solid white;
+        background-color: #9fa2b4;
 
-        i{
-            font-size: 1.6rem;
+        h2 {
+          color: white;
         }
-        
+
+        i {
+          color: white;
+        }
+      }
+
+      i {
+        font-size: 1.6rem;
+        color: #9fa2b4;
+      }
     }
 
-    &__divider{
-        background-color:$text-color;
-        margin-top:1.6rem;
-        margin-bottom:1.6rem;
-        width:100%;
-        height:2px;
-        opacity: 0.06;
+    &__divider {
+      background-color: $text-color;
+      margin-top: 1.6rem;
+      margin-bottom: 1.6rem;
+      width: 100%;
+      height: 2px;
+      opacity: 0.06;
     }
-}
+  }
 }

@@ -3,13 +3,17 @@ import TicketDetails from "./TicketDetails";
 import CustomerDetails from "./CustomerDetails";
 import DateField from "./DateField";
 import Priority from "./Priority";
-const TableRow = ({ item, deleteItem, index }) => {
-  // const handleDeleteButton = (index) => {
-  //   deleteItem(index);
-  // };
+
+import { useNavigate } from "react-router-dom";
+const TableRow = ({ item, deleteItem }) => {
+  const navigate = useNavigate();
+
+  const handleTicketClick = (item) => {
+    navigate(`details/${item.id}`);
+  };
   return (
     <tr>
-      <td>
+      <td onClick={() => handleTicketClick(item)}>
         <TicketDetails item={item} />
       </td>
       <td>

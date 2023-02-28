@@ -14,15 +14,15 @@ const TicketDetailsPage = () => {
         <h1>Ticket Details</h1>
 
         <div style={{ marginInline: "auto" }}>
-          <Avatar avatarSource="../../man.png" />
+          <Avatar avatarSource={`../../${singleTicket.avatarSource}`} />
         </div>
 
-        <h2>Name:Tom Cruise</h2>
+        <h2>Name:{singleTicket.name}</h2>
 
-        <h3>Ticket Name:Contact Email Not Linked</h3>
-        <h3>Ticket Id: </h3>
-        <h3>Date:</h3>
-        <h3>priority:</h3>
+        <h3>Ticket Name:{singleTicket.ticketName}</h3>
+        <h3>Ticket Id:{singleTicket.id} </h3>
+        <h3>Date:{singleTicket.date}</h3>
+        <h3>priority:{singleTicket.priority}</h3>
       </div>
     </div>
   );

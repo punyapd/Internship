@@ -1,8 +1,6 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
 const SidebarListItem = ({ item }) => {
-  console.log("item:", item);
-
   return (
     <NavLink
       to={item.path}

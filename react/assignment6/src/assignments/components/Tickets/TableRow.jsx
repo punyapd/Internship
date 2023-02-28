@@ -9,11 +9,11 @@ const TableRow = ({ item, deleteItem }) => {
   const navigate = useNavigate();
 
   const handleTicketClick = (item) => {
-    navigate(`details/${item.id}`);
+    navigate(`details/${item}`);
   };
   return (
     <tr>
-      <td onClick={() => handleTicketClick(item)}>
+      <td onClick={() => handleTicketClick(item.nodeName)}>
         <TicketDetails item={item} />
       </td>
       <td>
@@ -27,7 +27,10 @@ const TableRow = ({ item, deleteItem }) => {
       </td>
 
       <td item={item}>
-        <button className="delete-button" onClick={() => deleteItem(item.id)}>
+        <button
+          className="delete-button"
+          onClick={() => deleteItem(item.nodeName)}
+        >
           {" "}
           <img
             src="delete.png"

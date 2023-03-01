@@ -2,44 +2,40 @@ assignment = [
   {
     title: "Dashboard UI",
     codeLink:
-      "https://www.figma.com/file/8FzCmUF9duNc7cmbu6chnI/task?node-id=6%3A249&t=CrETk1Dznnt86Flv-0",
+      "https://github.com/punyapd/Internship/tree/master/react/assignment1",
     demoLink:
-      "https://www.figma.com/proto/8FzCmUF9duNc7cmbu6chnI/task?node-id=6%3A249&scaling=min-zoom&page-id=3%3A36&starting-point-node-id=6%3A249",
+      "https://63f19413d4197c0d6e96043b--puyapd-react-assignment-1.netlify.app/",
   },
   {
     title: "Notification , modal , delete",
     codeLink:
-      "https://www.figma.com/file/8FzCmUF9duNc7cmbu6chnI/task?node-id=3%3A37&t=XhlqH1nU8sGRugVd-0",
+      "https://github.com/punyapd/Internship/tree/master/react/assignment2",
     demoLink:
-      "https://www.figma.com/proto/8FzCmUF9duNc7cmbu6chnI/task?node-id=3%3A37&scaling=min-zoom&page-id=3%3A36&starting-point-node-id=6%3A249",
+      "https://63f1b8416621d32238c03266--punyapd-react-assignment-2.netlify.app/",
   },
   {
     title: "custom hooks",
     codeLink:
-      "https://www.figma.com/file/8FzCmUF9duNc7cmbu6chnI/task?node-id=4%3A100&t=XhlqH1nU8sGRugVd-0",
-    demoLink:
-      "https://www.figma.com/proto/8FzCmUF9duNc7cmbu6chnI/task?node-id=4%3A100&scaling=min-zoom&page-id=3%3A36&starting-point-node-id=6%3A249",
+      "https://github.com/punyapd/Internship/tree/master/react/assignment3",
+    demoLink: "https://punyapd-react-assignment-3.netlify.app/",
   },
   {
     title: "login  , signup",
     codeLink:
-      "https://www.figma.com/file/8FzCmUF9duNc7cmbu6chnI/task?node-id=4%3A100&t=XhlqH1nU8sGRugVd-0",
-    demoLink:
-      "https://www.figma.com/proto/8FzCmUF9duNc7cmbu6chnI/task?node-id=4%3A100&scaling=min-zoom&page-id=3%3A36&starting-point-node-id=6%3A249",
+      "https://github.com/punyapd/Internship/tree/master/react/assignment4",
+    demoLink: "https://punyapd-react-assignment-4.netlify.app/",
   },
   {
     title: "json server",
     codeLink:
-      "https://www.figma.com/file/8FzCmUF9duNc7cmbu6chnI/task?node-id=4%3A100&t=XhlqH1nU8sGRugVd-0",
-    demoLink:
-      "https://www.figma.com/proto/8FzCmUF9duNc7cmbu6chnI/task?node-id=4%3A100&scaling=min-zoom&page-id=3%3A36&starting-point-node-id=6%3A249",
+      "https://github.com/punyapd/Internship/tree/master/react/assignment5",
+    demoLink: "https://punyapd-react-assignment-5.netlify.app/",
   },
   {
     title: "layout routing  , firebase",
     codeLink:
-      "https://www.figma.com/file/8FzCmUF9duNc7cmbu6chnI/task?node-id=4%3A100&t=XhlqH1nU8sGRugVd-0",
-    demoLink:
-      "https://www.figma.com/proto/8FzCmUF9duNc7cmbu6chnI/task?node-id=4%3A100&scaling=min-zoom&page-id=3%3A36&starting-point-node-id=6%3A249",
+      "https://github.com/punyapd/Internship/tree/master/react/assignment6",
+    demoLink: "https://punyapd-react-assignment-6.netlify.app/",
   },
 ];
 let main = document.getElementById("main");

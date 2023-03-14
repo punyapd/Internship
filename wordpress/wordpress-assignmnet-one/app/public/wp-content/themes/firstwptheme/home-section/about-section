@@ -1,0 +1,45 @@
+<!-- about section for home page -->
+<section class="about-section bg-white py-10 py-md-20 py-xl-30">
+    <div class="container">
+        <div class="row justify-content-between">
+            <!-- card column -->
+            <div class="col-12 col-md-6 mb-10 mb-md-0 about-section__card">
+                <div class="card  h-100 py-md-10  bg-white">
+                    <div class="card-body">
+                        <?php
+                        $pageId = get_the_ID();
+
+                        $title = get_post_meta($pageId, 'about_title', true);
+                        $description = get_post_meta($pageId, 'about_description', true);
+                        $imageSource = get_post_meta($pageId, 'about_image', true);
+
+                        ?>
+                        <h6 class="h6 text-space  mb-10"><?php echo $title ?></h6>
+
+                        <p class="card-text-small Body-xl mb-10"><?php echo $description ?></p>
+                        <button type="submit" class="btn btn-space  px-4 py-2 fw-bold cursor-pointer">
+                            Learn More
+                            &nbsp; &#8594;
+                        </button>
+
+                    </div>
+                </div>
+
+
+
+
+            </div>
+
+            <!--image column -->
+            <div class="col-12 col-md-6 col-xl-5 align-middle about-us__image">
+                <div class="about-section__video bg-lightmint p-6 @@showHideVideo">
+                    <h6 class="h6 mb-4">how about us ?</h6>
+                    <div class="about-section__video__wrapper positon-relative">
+                        <!-- </video> -->
+                        <video class="h-100 w-100 ratio ratio-279x238" src="images/video.mp4" poster="<?php echo $imageSource ?>" title="about us video" controls></video>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

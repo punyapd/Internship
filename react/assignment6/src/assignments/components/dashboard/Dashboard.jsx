@@ -6,11 +6,11 @@ import Ticket from "../Tickets/Ticket";
 const Dashboard = () => {
   const navigate = useNavigate();
 
-  useEffect(() => {
-    if (!localStorage.getItem("loggedState")) {
-      navigate("/login");
-    }
-  }, []);
+  // useEffect(() => {
+  //   if (!localStorage.getItem("loggedState")) {
+  //     navigate("/login");
+  //   }
+  // }, []);
 
   return (
     <div className="dashboard">
